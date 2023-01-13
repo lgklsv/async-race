@@ -1,6 +1,6 @@
-// import { renderFooter } from '../Footer/Footer';
-// import { renderHeader } from '../Header/Header';
 import { renderGarage } from '../Garage/Garage';
+import { renderHeader } from '../Header/Header';
+// import { renderFooter } from '../Footer/Footer';
 import styles from './App.module.scss';
 
 export const renderApp = (): Element => {
@@ -9,11 +9,11 @@ export const renderApp = (): Element => {
   const appContiner: Element = document.querySelector('#app') as Element;
   appContiner.innerHTML = '';
 
-  // const header: HTMLElement = renderHeader();
-  // const footer: HTMLElement = renderFooter();
+  const header: HTMLElement = renderHeader();
   const main: HTMLElement = renderGarage();
-  // appContiner.append(header, main, footer);
-  appContiner.append(main);
+  // const footer: HTMLElement = renderFooter();
+
+  appContiner.append(header, main);
 
   return appContiner;
 };

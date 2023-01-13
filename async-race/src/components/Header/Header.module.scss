@@ -1,5 +1,49 @@
 @import '/src/theme/variable';
 
 .header {
-  color: aliceblue;
+  background-color: $bg-header;
+  max-width: 100%;
+  height: $header-height;
+  border-bottom: 1px solid $conditionalborder;
+}
+
+.header__container {
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: $desktop;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  display: block;
+  background-image: url('/src/assets/images/async-race-logo.png');
+  width: 7rem;
+  height: 3.2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 2rem;
+}
+
+.header__nav {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.header__nav-btn {
+  text-transform: capitalize;
+  text-decoration: underline;
+  color: $white;
+  font-size: 0.7rem;
+  padding: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    color: $red;
+  }
 }
