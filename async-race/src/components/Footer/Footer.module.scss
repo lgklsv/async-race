@@ -1,0 +1,53 @@
+@import '/src/theme/variable';
+
+.footer {
+  height: $footer-height;
+  width: 100%;
+  background-color: $bg-secondary;
+  text-transform: uppercase;
+  color: $conditionalborder;
+  font-size: 0.7rem;
+  display: flex;
+}
+
+.footer__container {
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: $desktop;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__link {
+  color: $conditionalborder;
+  transition: all 0.3s;
+  &:hover {
+    color: $grey;
+    text-decoration: none;
+  }
+}
+
+.rsSchoolLink {
+  display: block;
+  background-image: url('../../assets/images/rs_school_js.svg');
+  width: 2.5rem;
+  height: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all 0.3s;
+  filter: invert(20%) sepia(0%) saturate(50%) hue-rotate(150deg) brightness(107%) contrast(83%);
+  &:hover {
+    filter: invert(99%) sepia(0%) saturate(7398%) hue-rotate(230deg) brightness(116%) contrast(60%);
+  }
+}

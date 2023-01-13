@@ -1,7 +1,7 @@
 @import '/src/theme/variable';
 
 .header {
-  background-color: $bg-header;
+  background-color: $bg-secondary;
   max-width: 100%;
   height: $header-height;
   border-bottom: 1px solid $conditionalborder;
@@ -21,7 +21,7 @@
   display: block;
   background-image: url('/src/assets/images/async-race-logo.png');
   width: 7rem;
-  height: 3.2rem;
+  height: 5rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -36,14 +36,14 @@
 
 .header__nav-btn {
   text-transform: capitalize;
-  text-decoration: underline;
-  color: $white;
-  font-size: 0.7rem;
+  color: $grey;
+  font-size: 1rem;
   padding: 0.3rem;
   cursor: pointer;
   transition: all 0.3s;
 
   &:hover {
-    color: $red;
+    color: $white;
+    text-decoration: underline;
   }
 }

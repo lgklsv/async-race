@@ -1,6 +1,6 @@
 import { renderGarage } from '../Garage/Garage';
 import { renderHeader } from '../Header/Header';
-// import { renderFooter } from '../Footer/Footer';
+import { renderFooter } from '../Footer/Footer';
 import styles from './App.module.scss';
 
 export const renderApp = (): Element => {
@@ -11,9 +11,9 @@ export const renderApp = (): Element => {
 
   const header: HTMLElement = renderHeader();
   const main: HTMLElement = renderGarage();
-  // const footer: HTMLElement = renderFooter();
+  const footer: HTMLElement = renderFooter();
 
-  appContiner.append(header, main);
+  appContiner.append(header, main, footer);
 
   return appContiner;
 };
