@@ -8,8 +8,6 @@ export const pathResolver = (pathname: string): void => {
   document.title = route.title;
 };
 
-pathResolver(window.location.pathname);
-
 window.addEventListener('popstate', (): void => {
   pathResolver(window.location.pathname);
 });
