@@ -1,11 +1,11 @@
 import { createElem } from '../utils/create-element';
 
-export const winners = function (): void {
-  // TODO render winners here // winners entry point
+export const notFound = function (): void {
+  // TODO render notFound here // notFound entry point
   const app = document.getElementById('app') as HTMLElement;
   app.innerHTML = '';
 
   const h1 = createElem('h1', 'heading');
-  h1.innerHTML = 'WINNERS';
+  h1.innerHTML = '404';
   app.append(h1);
 };

@@ -1,3 +1,2 @@
 import './style.scss';
-
-console.log('Hello wrld');
+import './router/router';
