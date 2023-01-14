@@ -7,28 +7,11 @@
 }
 
 .controls__input {
-  background-color: $bg-trenary;
-  border: 1px solid $conditionalborder;
-  color: $light-color;
+  @extend %input;
   padding: 0.5rem;
-  border-radius: 5px;
-  outline: none;
-  transition: all 0.3s;
-  &:focus {
-    border: 1px solid $grey;
-  }
 }
 
 .controls__pick-color {
-  background-color: $bg-trenary;
+  @extend %input;
   height: 33px;
-  padding: 0.1rem;
-  border: 1px solid $conditionalborder;
-  color: $light-color;
-  border-radius: 5px;
-  outline: none;
-  transition: all 0.3s;
-  &:focus {
-    border: 1px solid $grey;
-  }
 }

@@ -6,10 +6,10 @@ export const renderControls = (): HTMLElement => {
   const contolsContainer: HTMLElement = createElem('div', styles['controls']);
 
   // create car
-  const create: HTMLElement = renderCarInput();
+  const create: HTMLElement = renderCarInput('create');
 
   // update car
-  const update: HTMLElement = renderCarInput();
+  const update: HTMLElement = renderCarInput('update');
 
   contolsContainer.append(create, update);
   return contolsContainer;

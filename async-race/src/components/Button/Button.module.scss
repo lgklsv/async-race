@@ -1,18 +1,17 @@
-@import '/src/theme/colors';
+@import '/src/theme/variable';
 
-$desktop: 1200px;
-$footer-height: 70px;
-$header-height: 80px;
-
-%input {
+.button {
   background-color: $bg-trenary;
+  text-transform: capitalize;
   border: 1px solid $conditionalborder;
-  color: $light-color;
+  width: 70px;
   border-radius: 5px;
-  outline: none;
+  color: $grey;
+  cursor: pointer;
   transition: all 0.3s;
-  &:focus,
+
   &:hover {
+    background-color: $bg-secondary;
     border: 1px solid $grey;
   }
 }
