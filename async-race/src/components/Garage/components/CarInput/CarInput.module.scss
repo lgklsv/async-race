@@ -1,0 +1,34 @@
+@import '/src/theme/variable';
+
+.controls__change {
+  margin: 1rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.controls__input {
+  background-color: $bg-trenary;
+  border: 1px solid $conditionalborder;
+  color: $light-color;
+  padding: 0.5rem;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s;
+  &:focus {
+    border: 1px solid $grey;
+  }
+}
+
+.controls__pick-color {
+  background-color: $bg-trenary;
+  height: 33px;
+  padding: 0.1rem;
+  border: 1px solid $conditionalborder;
+  color: $light-color;
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s;
+  &:focus {
+    border: 1px solid $grey;
+  }
+}
