@@ -1,6 +1,6 @@
-import { createElem } from '../../../../utils/create-element';
-import { createInput } from '../../../../utils/create-input-element';
-import { renderButton } from '../../../Button/Button';
+import { createElem } from '../../../../../../utils/create-element';
+import { createInput } from '../../../../../../utils/create-input-element';
+import { renderButton } from '../../../../../Button/Button';
 import styles from './CarInput.module.scss';
 
 export const renderCarInput = (buttonText: string): HTMLElement => {

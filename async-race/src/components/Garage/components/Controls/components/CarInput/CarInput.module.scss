@@ -9,9 +9,15 @@
 .controls__input {
   @extend %input;
   padding: 0.5rem;
+  width: 265px;
 }
 
 .controls__pick-color {
   @extend %input;
+  padding: 0.1rem;
   height: 33px;
+
+  &::-webkit-color-swatch{
+    border-radius: 3px;
+  }
 }

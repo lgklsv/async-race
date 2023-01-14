@@ -1,5 +1,6 @@
 import { createElem } from '../../../../utils/create-element';
-import { renderCarInput } from '../CarInput/CarInput';
+import { renderCarControlBtns } from './components/CarControlBtns/CarControlBtns';
+import { renderCarInput } from './components/CarInput/CarInput';
 import styles from './Controls.module.scss';
 
 export const renderControls = (): HTMLElement => {
@@ -11,6 +12,8 @@ export const renderControls = (): HTMLElement => {
   // update car
   const update: HTMLElement = renderCarInput('update');
 
-  contolsContainer.append(create, update);
+  const carContros: HTMLElement = renderCarControlBtns();
+
+  contolsContainer.append(create, update, carContros);
   return contolsContainer;
 };

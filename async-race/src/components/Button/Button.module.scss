@@ -5,6 +5,7 @@
   text-transform: capitalize;
   border: 1px solid $conditionalborder;
   width: 70px;
+  height: 33px;
   border-radius: 5px;
   color: $grey;
   cursor: pointer;
@@ -14,4 +15,20 @@
     background-color: $bg-secondary;
     border: 1px solid $grey;
   }
+}
+
+.button_race {
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid $red;
+  color: $red;
+  &:hover {
+    background-color: $red;
+    color: $grey;
+    border: 1px solid transparent;
+  }
+}
+
+.button_generate-cars {
+  width: 245px;
 }
