@@ -1,0 +1,30 @@
+@import '/src/theme/variable';
+
+.garage-section {
+  margin-top: 2rem;
+  background: $bg-secondary;
+  border: 1px solid $conditionalborder;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.garage__info {
+  border-bottom: 1px solid $conditionalborder;
+  padding-bottom: 0.5rem;
+}
+
+.garage__heading {
+  font-size: 1.2rem;
+}
+
+.garage__page-num {
+  font-size: 1rem;
+}
+
+.garage__paginate-btns {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid $conditionalborder;
+}
