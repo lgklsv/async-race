@@ -1,8 +1,7 @@
-import path from 'path';
-import { Configuration } from 'webpack';
-import 'webpack-dev-server';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+const path = require('path');
+require('webpack-dev-server');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const entryPath = path.join(__dirname, 'src', 'index.ts');
 const bundlePath = path.join(__dirname, 'dist');
@@ -10,7 +9,7 @@ const htmlTemplatePath = path.join(__dirname, 'src', 'index.html');
 const assetsPath = path.resolve(__dirname, 'src', 'assets');
 // const faviconPath = path.join(__dirname, 'src', 'assets', 'favicon.png'); //TODO
 
-const config: Configuration = {
+module.exports = {
   entry: entryPath,
   output: {
     filename: '[name].bundle.js',
@@ -71,10 +70,11 @@ const config: Configuration = {
       },
     ],
   },
+  experiments: {
+    topLevelAwait: true,
+  },
   resolve: {
     extensions: ['.ts', '.js', '.css', '.scss'],
     alias: { assets: assetsPath },
   },
 };
-
-export default config;
