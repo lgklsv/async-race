@@ -1,9 +1,10 @@
 interface Garage {
-  cars: Cars[];
-  page: number,
+  cars: Car[];
+  totalCars: string | null;
+  page: number;
 }
 
-interface Cars {
+interface Car {
   name: string;
   color: string;
   id: number;

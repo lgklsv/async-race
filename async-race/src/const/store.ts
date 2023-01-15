@@ -1,6 +1,9 @@
 import { getCars } from '../API/get-cars';
 
+const { items, count } = await getCars(1);
+
 export const garage: Garage = {
-  cars: await getCars(1),
+  cars: items,
+  totalCars: count,
   page: 1,
 };
