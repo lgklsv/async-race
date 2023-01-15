@@ -9,10 +9,10 @@ export const renderCarInput = (buttonText: string): HTMLElement => {
   const createCarInput: HTMLInputElement = createInput('text', 'controls__input');
   createCarInput.placeholder = 'Enter car name:';
 
-  const pickColorInput: HTMLInputElement =  createInput('color', 'controls__pick-color');
+  const pickColorInput: HTMLInputElement = createInput('color', 'controls__pick-color');
 
   const button: HTMLElement = renderButton(buttonText);
-  
+
   inputsContainer.append(createCarInput, pickColorInput, button);
 
   return inputsContainer;

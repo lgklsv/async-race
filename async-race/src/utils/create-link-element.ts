@@ -1,6 +1,5 @@
 import { createElem } from './create-element';
 
-/** Функция для генерации элемента ссылки, необходимо ввести ссылку, создаваемый класс, нужен ли аттрибут target blank (true/false) и текст ссылки */
 export const createLink = (
   link: string,
   className: string,

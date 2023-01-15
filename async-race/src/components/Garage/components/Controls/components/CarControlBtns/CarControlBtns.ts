@@ -1,5 +1,5 @@
-import { createElem } from "../../../../../../utils/create-element";
-import { renderButton } from "../../../../../Button/Button";
+import { createElem } from '../../../../../../utils/create-element';
+import { renderButton } from '../../../../../Button/Button';
 import styles from './CarControlBtns.module.scss';
 
 export const renderCarControlBtns = (): HTMLElement => {
@@ -10,6 +10,5 @@ export const renderCarControlBtns = (): HTMLElement => {
 
   carControlBtnsContainer.append(raceBtn, resetBtn, generateCarsBtn);
 
-
   return carControlBtnsContainer;
-} 
+};

@@ -9,7 +9,7 @@ export const renderGarage = (): HTMLElement => {
 
   const controls: HTMLElement = renderControls();
   const race: HTMLElement = renderRaceContainer();
-  
+
   mainContainer.append(controls, race);
   main.append(mainContainer);
   return main;
