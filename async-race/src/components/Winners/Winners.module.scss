@@ -1,0 +1,10 @@
+@import '/src/theme/variable';
+
+.winners {
+  position: absolute;
+  background-color: $background;
+  height: calc(100% - $footer-height - $header-height);
+  width: 100%;
+  z-index: 2;
+  top: $header-height;
+}

@@ -2,6 +2,7 @@ import { renderGarage } from '../Garage/Garage';
 import { renderHeader } from '../Header/Header';
 import { renderFooter } from '../Footer/Footer';
 import styles from './App.module.scss';
+import { renderWinners } from '../Winners/Winners';
 
 export const renderApp = (): Element => {
   document.body.classList.add(styles['body']);
@@ -13,7 +14,10 @@ export const renderApp = (): Element => {
   const main: HTMLElement = renderGarage();
   const footer: HTMLElement = renderFooter();
 
-  appContiner.append(header, main, footer);
+  const winners: HTMLElement = renderWinners();
+  winners.classList.add('hidden');
+
+  appContiner.append(header, main, footer, winners);
 
   return appContiner;
 };
