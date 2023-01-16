@@ -20,6 +20,7 @@
     "no-console": "warn",
     "no-plusplus": "off",
     "dot-notation": "off",
+    "indent": "off",
     "class-methods-use-this": "off",
     "prettier/prettier": [
       "error",

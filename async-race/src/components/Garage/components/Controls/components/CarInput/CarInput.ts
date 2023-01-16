@@ -2,7 +2,6 @@ import { createElem } from '../../../../../../utils/create-element';
 import { createInput } from '../../../../../../utils/create-input-element';
 import { renderButton } from '../../../../../Button/Button';
 import styles from './CarInput.module.scss';
-import { carFormHandler } from './CarInputHandler';
 
 export const renderCarInput = (buttonText: string, disabled: boolean): HTMLElement => {
   const form: HTMLElement = createElem('form', styles['controls__change']);
@@ -21,8 +20,6 @@ export const renderCarInput = (buttonText: string, disabled: boolean): HTMLEleme
   if (disabled) button.classList.add('disabled');
 
   form.append(createCarInput, pickColorInput, button);
-
-  form.onsubmit = carFormHandler;
 
   return form;
 };

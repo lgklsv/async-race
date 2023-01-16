@@ -6,6 +6,11 @@
   gap: 1.5rem;
 }
 
+#update {
+  position: relative;
+  z-index: 2;
+}
+
 .controls__input {
   @extend %input;
   padding: 0.5rem;
@@ -17,7 +22,7 @@
   padding: 0.1rem;
   height: 33px;
 
-  &::-webkit-color-swatch{
+  &::-webkit-color-swatch {
     border-radius: 3px;
   }
 }

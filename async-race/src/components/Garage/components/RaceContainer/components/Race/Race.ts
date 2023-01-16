@@ -1,4 +1,5 @@
 import { deleteCar } from '../../../../../../API/delete-car';
+import { getCar } from '../../../../../../API/get-car';
 import { createElem } from '../../../../../../utils/create-element';
 import { updateGarageUI } from '../../../../../../utils/update-garageUI';
 import { renderButton } from '../../../../../Button/Button';
@@ -10,6 +11,32 @@ export const renderRace = (name: string, color: string, id: number): HTMLElement
   const btnsTop: HTMLElement = createElem('div', 'race__car-controls');
 
   const selectBtn: HTMLElement = renderButton('select', '', ['slim']);
+  selectBtn.id = id.toString();
+
+  selectBtn.onclick = async (e: Event) => {
+    const target = e.target as HTMLButtonElement;
+    if (target.id) await getCar(+target.id);
+
+    // TODO refactor code
+    // Remove active race
+    const allRaces = Array.from(document.querySelectorAll('.race'));
+    allRaces.forEach((race) => race.classList.remove('race_active'));
+
+    // Add active race
+    const curRace = target.closest('.race') as HTMLElement;
+    curRace.classList.add('race_active');
+
+    // Add overlay
+    const overlay = document.querySelector('.overlay') as HTMLElement;
+    overlay.classList.add('active');
+
+    // Enable update input
+    const updateForm = document.getElementById('update') as HTMLElement;
+    const formElems = Array.from(updateForm.children);
+
+    formElems.forEach((el) => el.classList.remove('disabled'));
+  };
+
   const removeBtn: HTMLElement = renderButton('remove', '', ['slim']);
   removeBtn.id = id.toString();
 

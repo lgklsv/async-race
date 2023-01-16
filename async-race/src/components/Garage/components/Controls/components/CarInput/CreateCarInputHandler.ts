@@ -1,7 +1,7 @@
 import { createCar } from '../../../../../../API/create-car';
 import { updateGarageUI } from '../../../../../../utils/update-garageUI';
 
-export const carFormHandler = async (e: Event): Promise<void> => {
+export const createCarFormHandler = async (e: Event): Promise<void> => {
   e.preventDefault();
 
   function carIsCar(car: object): car is NewCar {

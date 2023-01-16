@@ -8,6 +8,10 @@
   margin-top: 1rem;
 }
 
+.race_active {
+  z-index: 2;
+}
+
 .race__car-controls {
   display: flex;
   align-items: center;
@@ -16,6 +20,7 @@
 }
 
 .race__car-name {
+  text-transform: capitalize;
   font-size: 1.2rem;
 }
 
