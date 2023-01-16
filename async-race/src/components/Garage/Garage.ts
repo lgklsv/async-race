@@ -8,9 +8,11 @@ export const renderGarage = (): HTMLElement => {
   const mainContainer: HTMLElement = createElem('div', 'main__container');
 
   const controls: HTMLElement = renderControls();
-  const race: HTMLElement = renderRaceContainer();
+  const garage: HTMLElement = createElem('div', 'garage-section');
+  const raceContainer: HTMLElement = renderRaceContainer();
+  garage.append(raceContainer);
 
-  mainContainer.append(controls, race);
+  mainContainer.append(controls, garage);
   main.append(mainContainer);
   return main;
 };

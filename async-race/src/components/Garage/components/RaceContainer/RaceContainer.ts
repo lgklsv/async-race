@@ -5,7 +5,7 @@ import styles from './RaceContainer.module.scss';
 import { garage } from '../../../../const/store';
 
 export const renderRaceContainer = (): HTMLElement => {
-  const contolsContainer: HTMLElement = createElem('div', styles['garage-section']);
+  const contolsContainer: HTMLElement = createElem('div', styles['garage']);
 
   const garageHeading: HTMLElement = createElem('div', 'garage__info');
 
