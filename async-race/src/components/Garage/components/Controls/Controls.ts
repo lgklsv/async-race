@@ -6,11 +6,9 @@ import styles from './Controls.module.scss';
 export const renderControls = (): HTMLElement => {
   const contolsContainer: HTMLElement = createElem('div', styles['controls']);
 
-  // create car
-  const create: HTMLElement = renderCarInput('create');
+  const create: HTMLElement = renderCarInput('create', false);
 
-  // update car
-  const update: HTMLElement = renderCarInput('update');
+  const update: HTMLElement = renderCarInput('update', true);
 
   const carContros: HTMLElement = renderCarControlBtns();
 

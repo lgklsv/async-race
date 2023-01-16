@@ -5,7 +5,6 @@ import styles from './App.module.scss';
 import { renderWinners } from '../Winners/Winners';
 
 export const renderApp = (): Element => {
-  console.log('hi');
   document.body.classList.add(styles['body']);
 
   const appContiner: Element = document.querySelector('#app') as Element;

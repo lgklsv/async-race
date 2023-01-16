@@ -10,7 +10,7 @@ export const renderRaceContainer = (): HTMLElement => {
   const garageHeading: HTMLElement = createElem('div', 'garage__info');
 
   const heading: HTMLElement = createElem('h2', 'garage__heading');
-  heading.innerHTML = `Garage (${garage.cars.length})`;
+  heading.innerHTML = `Garage (${garage.totalCars})`;
 
   const pageNum: HTMLElement = createElem('h3', 'garage__page-num');
   pageNum.innerHTML = `Page #${garage.page}`;
@@ -26,8 +26,8 @@ export const renderRaceContainer = (): HTMLElement => {
   }
 
   const paginateBtns: HTMLElement = createElem('div', 'garage__paginate-btns');
-  const prevBtn: HTMLElement = renderButton('prev');
-  const nextBtn: HTMLElement = renderButton('next');
+  const prevBtn: HTMLElement = renderButton('prev', '');
+  const nextBtn: HTMLElement = renderButton('next', '');
   paginateBtns.append(prevBtn, nextBtn);
 
   contolsContainer.append(garageHeading, races, paginateBtns);
