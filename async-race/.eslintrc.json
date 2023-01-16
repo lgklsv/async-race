@@ -15,6 +15,7 @@
     "import/no-unresolved": "off",
     "import/extensions": ["off"],
     "comma-dangle": ["off", "never"],
+    "implicit-arrow-linebreak": ["off", "beside"],
     "no-debugger": "off",
     "no-console": "warn",
     "no-plusplus": "off",

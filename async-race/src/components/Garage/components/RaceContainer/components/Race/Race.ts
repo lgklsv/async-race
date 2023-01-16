@@ -1,4 +1,6 @@
+import { deleteCar } from '../../../../../../API/delete-car';
 import { createElem } from '../../../../../../utils/create-element';
+import { updateGarageUI } from '../../../../../../utils/update-garageUI';
 import { renderButton } from '../../../../../Button/Button';
 import styles from './Race.module.scss';
 
@@ -9,6 +11,14 @@ export const renderRace = (name: string, color: string, id: number): HTMLElement
 
   const selectBtn: HTMLElement = renderButton('select', '', ['slim']);
   const removeBtn: HTMLElement = renderButton('remove', '', ['slim']);
+  removeBtn.id = id.toString();
+
+  removeBtn.onclick = async (e: Event) => {
+    const target = e.target as HTMLButtonElement;
+    if (target.id) await deleteCar(+target.id);
+    await updateGarageUI();
+  };
+
   const carName: HTMLElement = createElem('p', 'race__car-name');
   carName.innerHTML = name;
   btnsTop.append(selectBtn, removeBtn, carName);
