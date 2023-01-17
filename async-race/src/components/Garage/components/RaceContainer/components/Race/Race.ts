@@ -8,12 +8,12 @@ export const renderRace = (name: string, color: string, id: number): HTMLElement
   const raceContainer: HTMLElement = createElem('div', styles['race']);
 
   const btnsTop: HTMLElement = createElem('div', 'race__car-controls');
-  const selectBtn: HTMLElement = renderButton('select', '', ['slim']);
+  const selectBtn: HTMLElement = renderButton('select', '', ['slim', 'select']);
   selectBtn.id = id.toString();
 
   selectBtn.onclick = selectHandler;
 
-  const removeBtn: HTMLElement = renderButton('remove', '', ['slim']);
+  const removeBtn: HTMLElement = renderButton('remove', '', ['slim', 'select']);
   removeBtn.id = id.toString();
 
   removeBtn.onclick = removeHandler;
@@ -23,8 +23,8 @@ export const renderRace = (name: string, color: string, id: number): HTMLElement
   btnsTop.append(selectBtn, removeBtn, carName);
 
   const btnsBottom: HTMLElement = createElem('div', 'race__car-controls');
-  const driveBtn: HTMLElement = renderButton('drive', '', ['race', 'slim']);
-  const restartBtn: HTMLElement = renderButton('restart', '', ['slim']);
+  const driveBtn: HTMLElement = renderButton('drive', '', ['race', 'slim', 'select']);
+  const restartBtn: HTMLElement = renderButton('restart', '', ['slim', 'select']);
   btnsBottom.append(driveBtn, restartBtn);
 
   const car: HTMLElement = createElem('div', 'race__car');

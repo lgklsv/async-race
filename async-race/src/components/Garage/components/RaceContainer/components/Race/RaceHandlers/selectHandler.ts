@@ -6,6 +6,8 @@ export const selectHandler = async (e: Event) => {
   if (target.id) {
     const car: Car = await getCar(+target.id);
     const updateForm = document.getElementById('update') as HTMLElement;
+    updateForm.setAttribute('data-id', target.id);
+
     const nameInput = updateForm.querySelector('#name') as HTMLInputElement;
     nameInput.value = car.name;
     nameInput.focus();

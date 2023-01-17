@@ -7,4 +7,5 @@ interface Garage {
   cars: Car[];
   totalCars: string | null;
   page: number;
+  updColorPicker: boolean;
 }

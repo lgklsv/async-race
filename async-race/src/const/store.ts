@@ -6,4 +6,5 @@ export const garage: Garage = {
   cars: items,
   totalCars: count,
   page: 1,
+  updColorPicker: false,
 };
