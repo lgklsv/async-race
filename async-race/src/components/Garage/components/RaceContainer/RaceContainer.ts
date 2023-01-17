@@ -4,6 +4,7 @@ import { renderRace } from './components/Race/Race';
 import styles from './RaceContainer.module.scss';
 import { garage } from '../../../../const/store';
 import { setPaginationBtns } from '../../../../utils/set-paginaton-btns';
+import { updateGarageUI } from '../../../../utils/update-garageUI';
 
 export const renderRaceContainer = (): HTMLElement => {
   const contolsContainer: HTMLElement = createElem('div', styles['garage']);
@@ -29,8 +30,20 @@ export const renderRaceContainer = (): HTMLElement => {
   const paginateBtns: HTMLElement = createElem('div', 'garage__paginate-btns');
   const prevBtn: HTMLElement = renderButton('prev', '');
   prevBtn.id = 'prev';
+
+  prevBtn.onclick = () => {
+    garage.page--;
+    updateGarageUI();
+  };
+
   const nextBtn: HTMLElement = renderButton('next', '');
   nextBtn.id = 'next';
+
+  nextBtn.onclick = () => {
+    garage.page++;
+    updateGarageUI();
+  };
+
   paginateBtns.append(prevBtn, nextBtn);
 
   setPaginationBtns(prevBtn, nextBtn);
