@@ -5,7 +5,8 @@ interface Car {
 }
 interface Garage {
   cars: Car[];
-  totalCars: string | null;
+  totalCars: number;
   page: number;
+  limit: number;
   updColorPicker: boolean;
 }

@@ -3,6 +3,7 @@ import { renderButton } from '../../../Button/Button';
 import { renderRace } from './components/Race/Race';
 import styles from './RaceContainer.module.scss';
 import { garage } from '../../../../const/store';
+import { setPaginationBtns } from '../../../../utils/set-paginaton-btns';
 
 export const renderRaceContainer = (): HTMLElement => {
   const contolsContainer: HTMLElement = createElem('div', styles['garage']);
@@ -27,8 +28,12 @@ export const renderRaceContainer = (): HTMLElement => {
 
   const paginateBtns: HTMLElement = createElem('div', 'garage__paginate-btns');
   const prevBtn: HTMLElement = renderButton('prev', '');
+  prevBtn.id = 'prev';
   const nextBtn: HTMLElement = renderButton('next', '');
+  nextBtn.id = 'next';
   paginateBtns.append(prevBtn, nextBtn);
+
+  setPaginationBtns(prevBtn, nextBtn);
 
   contolsContainer.append(garageHeading, races, paginateBtns);
 
