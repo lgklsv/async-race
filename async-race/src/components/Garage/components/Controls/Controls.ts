@@ -8,7 +8,6 @@ export const renderControls = (): HTMLElement => {
   const contolsContainer: HTMLElement = createElem('div', styles['controls']);
 
   const create: HTMLElement = renderCarInput('create', false);
-
   create.onsubmit = createCarFormHandler;
 
   const update: HTMLElement = renderCarInput('update', true);
