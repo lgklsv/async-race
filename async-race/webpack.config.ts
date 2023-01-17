@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 require('webpack-dev-server');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
