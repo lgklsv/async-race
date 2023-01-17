@@ -1,22 +1,25 @@
 @import '/src/theme/variable';
 
 .race {
-  height: 85px;
+  height: 90px;
   width: 100%;
   border-bottom: 2px dashed $grey;
   position: relative;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  transition: all 0.3s;
 }
 
 .race_active {
   z-index: 2;
+  background-color: $background;
+  border-radius: 5px 5px 0 0 ;
 }
 
 .race__car-controls {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 0.7rem;
+  padding: 7px 5px 0 5px;
 }
 
 .race__car-name {
@@ -30,8 +33,8 @@
   transform: scaleX(-1);
   position: absolute;
   z-index: 1;
-  top: 18px;
-  left: 170px;
+  top: 22px;
+  left: 175px;
 }
 
 .race__finish {
