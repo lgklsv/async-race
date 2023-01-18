@@ -6,6 +6,12 @@ import { setPaginationBtns } from './set-paginaton-btns';
 export const updateGarageUI = async () => {
   const { items, count } = await getCars(garage.page);
 
+  if (items.length === 0 && garage.page !== 1) {
+    garage.page--;
+    updateGarageUI();
+    return;
+  }
+
   garage.cars = items;
   garage.totalCars = count ? +count : 0;
 
