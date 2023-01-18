@@ -3,7 +3,7 @@ import { toggleSelectView } from '../../../../../../../utils/toggle-select-view'
 import { updateGarageUI } from '../../../../../../../utils/update-garageUI';
 import { carIsCar } from '../../../../../../../utils/car-is-car';
 
-export const updateCarHandler = async (e: Event): Promise<void> => {
+export const updateCarHandler = async (e: Event) => {
   e.preventDefault();
 
   const form = e.target;

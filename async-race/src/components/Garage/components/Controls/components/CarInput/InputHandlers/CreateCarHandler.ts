@@ -2,7 +2,7 @@ import { createCar } from '../../../../../../../API/create-car';
 import { updateGarageUI } from '../../../../../../../utils/update-garageUI';
 import { carIsCar } from '../../../../../../../utils/car-is-car';
 
-export const createCarHandler = async (e: Event): Promise<void> => {
+export const createCarHandler = async (e: Event) => {
   e.preventDefault();
 
   const form = e.target;
