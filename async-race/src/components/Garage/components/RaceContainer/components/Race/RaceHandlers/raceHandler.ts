@@ -6,16 +6,24 @@ import { getDistanceBetween } from '../../../../../../../utils/get-distance-betw
 
 export const raceHandler = async (e: Event) => {
   const target = e.target as HTMLButtonElement;
-  target.classList.add('disabled');
   if (target.id) {
-    const { velocity, distance } = await startStopEngine(+target.id, 'started');
-    const time = Math.round(distance / velocity);
+    const id = target.id.split('_')[1];
     const race = target.closest('.race') as HTMLElement;
+
+    const allBtns = Array.from(race.querySelectorAll('button'));
+    allBtns.forEach((el) => el.classList.add('disabled'));
+    const restartBtn = document.getElementById(`restart-btn_${id}`) as HTMLElement;
+    restartBtn.classList.remove('disabled');
+
+    const { velocity, distance } = await startStopEngine(+id, 'started');
+
+    const time = Math.round(distance / velocity);
     const car = race.querySelector('.race__car') as HTMLElement;
     const flag = race.querySelector('.race__finish') as HTMLElement;
     const distanceHTML = Math.floor(getDistanceBetween(car, flag)) + 50;
-    garage.animation[target.id] = animateCar(car, time, distanceHTML);
-    const res = await driveCar(+target.id);
-    if (!res.success) window.cancelAnimationFrame(garage.animation[target.id].id);
+
+    garage.animation[id] = animateCar(car, time, distanceHTML);
+    const res = await driveCar(+id);
+    if (!res.success) window.cancelAnimationFrame(garage.animation[id].id);
   }
 };
