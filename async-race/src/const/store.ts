@@ -8,4 +8,5 @@ export const garage: Garage = {
   page: 1,
   limit: 7,
   updColorPicker: false,
+  animation: {},
 };

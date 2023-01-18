@@ -9,4 +9,7 @@ interface Garage {
   page: number;
   limit: number;
   updColorPicker: boolean;
+  animation: {
+    [key: string]: AnimationState;
+  };
 }

@@ -3,6 +3,7 @@ export const animateCar = (car: HTMLElement, time: number, distance: number) => 
   let start: number | undefined;
   let previousTimeStamp: number | undefined;
   let done = false;
+  const state: AnimationState = { id: 0 };
 
   function step(timestamp: number) {
     if (start === undefined) {
@@ -19,10 +20,11 @@ export const animateCar = (car: HTMLElement, time: number, distance: number) => 
     if (elapsed < time) {
       previousTimeStamp = timestamp;
       if (!done) {
-        window.requestAnimationFrame(step);
+        state.id = window.requestAnimationFrame(step);
       }
     }
   }
 
-  window.requestAnimationFrame(step);
+  state.id = window.requestAnimationFrame(step);
+  return state;
 };
