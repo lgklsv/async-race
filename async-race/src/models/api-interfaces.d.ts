@@ -7,3 +7,10 @@ interface NewCar {
   name: string;
   color: string;
 }
+
+type EngineStatus = 'started' | 'stopped';
+
+interface EngineParams {
+  velocity: number;
+  distance: number;
+}

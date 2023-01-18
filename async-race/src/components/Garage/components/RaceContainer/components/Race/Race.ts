@@ -3,6 +3,7 @@ import { renderButton } from '../../../../../Button/Button';
 import styles from './Race.module.scss';
 import { removeHandler } from './RaceHandlers/removeHandler';
 import { selectHandler } from './RaceHandlers/selectHandler';
+import { raceHandler } from './RaceHandlers/raceHandler';
 
 export const renderRace = (name: string, color: string, id: number): HTMLElement => {
   const raceContainer: HTMLElement = createElem('div', styles['race']);
@@ -24,6 +25,10 @@ export const renderRace = (name: string, color: string, id: number): HTMLElement
 
   const btnsBottom: HTMLElement = createElem('div', 'race__car-controls');
   const driveBtn: HTMLElement = renderButton('drive', '', ['race', 'slim', 'select']);
+  driveBtn.id = id.toString();
+
+  driveBtn.onclick = raceHandler;
+
   const restartBtn: HTMLElement = renderButton('restart', '', ['slim', 'select']);
   btnsBottom.append(driveBtn, restartBtn);
 
