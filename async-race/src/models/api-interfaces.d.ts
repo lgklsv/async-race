@@ -14,3 +14,7 @@ interface EngineParams {
   velocity: number;
   distance: number;
 }
+
+interface DriveMod {
+  success: boolean;
+}
