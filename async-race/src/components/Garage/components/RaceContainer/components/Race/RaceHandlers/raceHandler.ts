@@ -1,5 +1,6 @@
 import { driveCar } from '../../../../../../../API/drive-car';
 import { startStopEngine } from '../../../../../../../API/start-stop-engine';
+import { animateCar } from '../../../../../../../utils/animate-car';
 import { getDistanceBetween } from '../../../../../../../utils/get-distance-between';
 
 export const raceHandler = async (e: Event) => {
@@ -10,8 +11,8 @@ export const raceHandler = async (e: Event) => {
     const race = target.closest('.race') as HTMLElement;
     const car = race.querySelector('.race__car') as HTMLElement;
     const flag = race.querySelector('.race__finish') as HTMLElement;
-    const distanceHTML = Math.floor(getDistanceBetween(car, flag)) + 100;
-    console.log(car, time, distanceHTML);
-    console.log(await driveCar(+target.id));
+    const distanceHTML = Math.floor(getDistanceBetween(car, flag)) + 50;
+    animateCar(car, time, distanceHTML);
+    await driveCar(+target.id);
   }
 };
