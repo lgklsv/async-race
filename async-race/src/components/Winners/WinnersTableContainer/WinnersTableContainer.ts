@@ -3,6 +3,7 @@ import { renderButton } from '../../Button/Button';
 import { setPaginationBtns } from '../../../utils/set-paginaton-btns';
 import styles from './WinnersTableContainer.module.scss';
 import { renderWinnersTable } from './WinnersTable/WinnersTable';
+import { winnersState } from '../../../const/store';
 
 export const renderWinnersTableContainer = (): HTMLElement => {
   const contolsContainer: HTMLElement = createElem('div', styles['winners__table']);
@@ -10,10 +11,10 @@ export const renderWinnersTableContainer = (): HTMLElement => {
   const winnersHeading: HTMLElement = createElem('div', 'winners__info');
 
   const heading: HTMLElement = createElem('h2', 'winners__heading');
-  heading.innerHTML = `Winners (${4})`;
+  heading.innerHTML = `Winners (${winnersState.totalWinners})`;
 
   const pageNum: HTMLElement = createElem('h3', 'winners__page-num');
-  pageNum.innerHTML = `Page #${1}`;
+  pageNum.innerHTML = `Page #${winnersState.page}`;
 
   winnersHeading.append(heading, pageNum);
 

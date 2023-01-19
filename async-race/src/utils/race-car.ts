@@ -1,6 +1,6 @@
 import { startStopEngine } from '../API/start-stop-engine';
 import { getDistanceBetween } from './get-distance-between';
-import { garage } from '../const/store';
+import { garageState } from '../const/store';
 import { animateCar } from './animate-car';
 import { driveCar } from '../API/drive-car';
 
@@ -19,7 +19,7 @@ export const raceCar = async (id: number) => {
   const flag = race.querySelector('.race__finish') as HTMLElement;
   const distanceHTML = Math.floor(getDistanceBetween(car, flag)) + 50;
 
-  garage.animation[id] = animateCar(car, time, distanceHTML);
+  garageState.animation[id] = animateCar(car, time, distanceHTML);
   const res = await driveCar(+id);
-  if (!res.success) window.cancelAnimationFrame(garage.animation[id].id);
+  if (!res.success) window.cancelAnimationFrame(garageState.animation[id].id);
 };

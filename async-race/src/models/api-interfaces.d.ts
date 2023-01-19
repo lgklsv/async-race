@@ -18,3 +18,8 @@ interface EngineParams {
 interface DriveMod {
   success: boolean;
 }
+
+interface GetWinners {
+  winners: Winner[];
+  num: string | null;
+}

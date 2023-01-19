@@ -2,7 +2,7 @@ import { createElem } from '../../../../utils/create-element';
 import { renderButton } from '../../../Button/Button';
 import { renderRace } from './components/Race/Race';
 import styles from './RaceContainer.module.scss';
-import { garage } from '../../../../const/store';
+import { garageState } from '../../../../const/store';
 import { setPaginationBtns } from '../../../../utils/set-paginaton-btns';
 import { updateGarageUI } from '../../../../utils/update-garageUI';
 
@@ -12,17 +12,17 @@ export const renderRaceContainer = (): HTMLElement => {
   const garageHeading: HTMLElement = createElem('div', 'garage__info');
 
   const heading: HTMLElement = createElem('h2', 'garage__heading');
-  heading.innerHTML = `Garage (${garage.totalCars})`;
+  heading.innerHTML = `Garage (${garageState.totalCars})`;
 
   const pageNum: HTMLElement = createElem('h3', 'garage__page-num');
-  pageNum.innerHTML = `Page #${garage.page}`;
+  pageNum.innerHTML = `Page #${garageState.page}`;
 
   garageHeading.append(heading, pageNum);
 
   const races: HTMLElement = createElem('div', 'race__container');
 
-  for (let i = 0; i < garage.cars.length; i++) {
-    const car = garage.cars[i];
+  for (let i = 0; i < garageState.cars.length; i++) {
+    const car = garageState.cars[i];
     const race: HTMLElement = renderRace(car.name, car.color, car.id);
     races.append(race);
   }
@@ -32,7 +32,7 @@ export const renderRaceContainer = (): HTMLElement => {
   prevBtn.id = 'prev';
 
   prevBtn.onclick = () => {
-    garage.page--;
+    garageState.page--;
     updateGarageUI();
   };
 
@@ -40,7 +40,7 @@ export const renderRaceContainer = (): HTMLElement => {
   nextBtn.id = 'next';
 
   nextBtn.onclick = () => {
-    garage.page++;
+    garageState.page++;
     updateGarageUI();
   };
 

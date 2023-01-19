@@ -1,19 +1,19 @@
 import { getCars } from '../API/get-cars';
-import { garage } from '../const/store';
+import { garageState } from '../const/store';
 import { renderRaceContainer } from '../components/Garage/components/RaceContainer/RaceContainer';
 import { setPaginationBtns } from './set-paginaton-btns';
 
 export const updateGarageUI = async () => {
-  const { items, count } = await getCars(garage.page);
+  const { items, count } = await getCars(garageState.page);
 
-  if (items.length === 0 && garage.page !== 1) {
-    garage.page--;
+  if (items.length === 0 && garageState.page !== 1) {
+    garageState.page--;
     updateGarageUI();
     return;
   }
 
-  garage.cars = items;
-  garage.totalCars = count ? +count : 0;
+  garageState.cars = items;
+  garageState.totalCars = count ? +count : 0;
 
   const garageEl = document.querySelector('.garage-section') as HTMLElement;
   garageEl.innerHTML = '';

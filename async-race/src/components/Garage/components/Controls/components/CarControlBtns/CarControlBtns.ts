@@ -1,5 +1,5 @@
 import { createCar } from '../../../../../../API/create-car';
-import { garage } from '../../../../../../const/store';
+import { garageState } from '../../../../../../const/store';
 import { createElem } from '../../../../../../utils/create-element';
 import { generateRandomCars } from '../../../../../../utils/generate-random-cars';
 import { raceCar } from '../../../../../../utils/race-car';
@@ -16,14 +16,14 @@ export const renderCarControlBtns = (): HTMLElement => {
   raceBtn.onclick = (e: Event) => {
     const target = e.target as HTMLElement;
     target.classList.add('disabled');
-    garage.cars.map((car) => raceCar(car.id));
+    garageState.cars.map((car) => raceCar(car.id));
   };
 
   const resetBtn: HTMLElement = renderButton('reset', '');
   resetBtn.onclick = async (e: Event) => {
     const target = e.target as HTMLElement;
     target.classList.add('disabled');
-    const allResProm = garage.cars.map((car) => restartCar(car.id));
+    const allResProm = garageState.cars.map((car) => restartCar(car.id));
     await Promise.all(allResProm);
     target.classList.remove('disabled');
     raceBtn.classList.remove('disabled');

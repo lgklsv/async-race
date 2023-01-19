@@ -1,11 +1,11 @@
-import { garage } from '../const/store';
+import { garageState } from '../const/store';
 import { startStopEngine } from '../API/start-stop-engine';
 
 export const restartCar = async (id: number) => {
   const race = document.getElementById(id.toString()) as HTMLElement;
 
-  if (garage.animation[id]) {
-    window.cancelAnimationFrame(garage.animation[id].id);
+  if (garageState.animation[id]) {
+    window.cancelAnimationFrame(garageState.animation[id].id);
     await startStopEngine(+id, 'stopped');
   }
 
