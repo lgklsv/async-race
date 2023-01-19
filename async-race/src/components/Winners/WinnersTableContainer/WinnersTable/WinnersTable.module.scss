@@ -1,0 +1,36 @@
+@import '/src/theme/variable';
+
+.winners-table {
+  padding: 1rem 0 1rem 0;
+}
+
+.winners-table__top-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 1rem;
+  background-color: $background;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid $conditionalborder;
+} 
+
+.winners-table__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.winners-table__row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.winners-table__car {
+  width: 40px;
+  justify-self: flex-start;
+  transform: scaleX(-1) scale(1.5);
+  margin-left: 0.8rem;
+}

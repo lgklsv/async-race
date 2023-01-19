@@ -1,0 +1,29 @@
+@import '/src/theme/variable';
+
+.winners__table {
+  background: $bg-secondary;
+  border: 1px solid $conditionalborder;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.winners__info {
+  border-bottom: 1px solid $conditionalborder;
+  padding: 0 5px 0.5rem 5px;
+}
+
+.winners__heading {
+  font-size: 1.2rem;
+}
+
+.winners__page-num {
+  font-size: 1rem;
+}
+
+.winners__paginate-btns {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid $conditionalborder;
+}

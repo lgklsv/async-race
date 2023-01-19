@@ -8,3 +8,10 @@
   z-index: 2;
   top: $header-height;
 }
+
+.winners__container {
+  max-width: $desktop;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2rem 15px 2rem 15px;
+}
