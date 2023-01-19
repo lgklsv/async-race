@@ -10,17 +10,32 @@ export const renderHeader = (): HTMLElement => {
 
   const toGarageBtn: HTMLElement = createElem('li', 'header__nav-btn');
   toGarageBtn.innerHTML = 'garage';
+  toGarageBtn.id = 'to-garage';
+  toGarageBtn.classList.add('header__nav-btn_active');
 
-  toGarageBtn.onclick = (): void => {
+  toGarageBtn.onclick = (e: Event): void => {
+    // TODO refactor
+    const target = e.target as HTMLElement;
+    target.classList.add('header__nav-btn_active');
     const winnersView = document.querySelector('.winners') as HTMLElement;
     winnersView.classList.add('hidden');
+
+    const toWinners = document.getElementById('to-winners') as HTMLElement;
+    toWinners.classList.remove('header__nav-btn_active');
   };
   const toWinnersBtn: HTMLElement = createElem('li', 'header__nav-btn');
   toWinnersBtn.innerHTML = 'winners';
+  toWinnersBtn.id = 'to-winners';
 
-  toWinnersBtn.onclick = (): void => {
+  toWinnersBtn.onclick = (e: Event): void => {
+    // TODO refactor
+    const target = e.target as HTMLElement;
+    target.classList.add('header__nav-btn_active');
     const winnersView = document.querySelector('.winners') as HTMLElement;
     winnersView.classList.remove('hidden');
+
+    const toGarage = document.getElementById('to-garage') as HTMLElement;
+    toGarage.classList.remove('header__nav-btn_active');
   };
 
   headerNav.append(toGarageBtn, toWinnersBtn);
