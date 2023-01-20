@@ -26,3 +26,8 @@ interface Winners {
   page: number;
   limit: number;
 }
+
+interface RaceWinner {
+  winner: Car;
+  winnerTime: number;
+}

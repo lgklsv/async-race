@@ -3,7 +3,7 @@ import { garageState } from '../const/store';
 import { animateCar } from './animate-car';
 import { driveCar } from '../API/drive-car';
 
-export const raceCar = async (id: number, carParams: EngineParams) => {
+export const raceCar = async (id: number, carParams: EngineParams): Promise<DriveMod> => {
   const race = document.getElementById(id.toString()) as HTMLElement;
 
   const time = Math.round(carParams.distance / carParams.velocity);
@@ -12,6 +12,9 @@ export const raceCar = async (id: number, carParams: EngineParams) => {
   const distanceHTML = Math.floor(getDistanceBetween(car, flag)) + 50;
 
   garageState.animation[id] = animateCar(car, time, distanceHTML);
+
   const res = await driveCar(+id);
-  if (!res.success) window.cancelAnimationFrame(garageState.animation[id].id);
+  const { success } = res;
+  if (!success) window.cancelAnimationFrame(garageState.animation[id].id);
+  return { success, id, time };
 };

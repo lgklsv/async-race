@@ -17,6 +17,8 @@ interface EngineParams {
 
 interface DriveMod {
   success: boolean;
+  id: number;
+  time: number;
 }
 
 interface GetWinners {
