@@ -4,6 +4,8 @@ import { getWinners } from '../API/get-winners';
 const { items, count } = await getCars(1);
 const { winners, num } = await getWinners(1);
 
+console.log(winners);
+
 export const garageState: Garage = {
   cars: items,
   totalCars: count ? +count : 0,

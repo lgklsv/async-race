@@ -18,7 +18,6 @@ export const raceAllHandler = async (e: Event) => {
   const { cars } = garageState;
   const promises = cars.map((car, idx) => raceCar(car.id, data[idx]));
   const winner = await raceAll(promises, cars);
-  console.log(winner);
-  // Save winner;
+
   saveWinner(winner);
 };

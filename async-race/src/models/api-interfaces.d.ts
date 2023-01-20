@@ -25,3 +25,8 @@ interface GetWinners {
   winners: Winner[];
   num: string | null;
 }
+
+interface UpdateWinner {
+  wins: number;
+  time: number;
+}
