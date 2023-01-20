@@ -5,6 +5,7 @@ import { startStopEngine } from '../../../../../../../API/start-stop-engine';
 import { raceAll } from '../../../../../../../utils/race-all';
 import { raceCar } from '../../../../../../../utils/race-car';
 import { saveWinner } from '../../../../../../../utils/save-winner';
+import { updateWinnersUI } from '../../../../../../../utils/update-winnersUI';
 
 export const raceAllHandler = async (e: Event) => {
   const target = e.target as HTMLElement;
@@ -19,5 +20,6 @@ export const raceAllHandler = async (e: Event) => {
   const promises = cars.map((car, idx) => raceCar(car.id, data[idx]));
   const winner = await raceAll(promises, cars);
 
-  saveWinner(winner);
+  await saveWinner(winner);
+  await updateWinnersUI();
 };

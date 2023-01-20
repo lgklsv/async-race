@@ -30,3 +30,7 @@ interface UpdateWinner {
   wins: number;
   time: number;
 }
+
+type SortTypes = 'id' | 'wins' | 'time';
+
+type OrderTypes = 'ASC' | 'DESC';

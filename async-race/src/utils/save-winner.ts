@@ -11,12 +11,12 @@ export const saveWinner = async (winner: RaceWinner) => {
       wins: 1,
       time: winner.winnerTime,
     };
-    createWinner(newWinner);
+    await createWinner(newWinner);
   } else {
     const updatedWinner: UpdateWinner = {
       wins: winnerExists.wins + 1,
       time: winnerExists.time > winner.winnerTime ? winner.winnerTime : winnerExists.time,
     };
-    updateWinner(winner.winner.id, updatedWinner);
+    await updateWinner(winner.winner.id, updatedWinner);
   }
 };
