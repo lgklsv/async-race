@@ -11,11 +11,11 @@ export const renderRace = (name: string, color: string, id: number): HTMLElement
   raceContainer.id = id.toString();
 
   const btnsTop: HTMLElement = createElem('div', 'race__car-controls');
-  const selectBtn: HTMLElement = renderButton('select', '', ['slim', 'select']);
+  const selectBtn: HTMLElement = renderButton('select', '', ['slim', 'control', 'select']);
   selectBtn.id = `select-btn_${id}`;
   selectBtn.onclick = selectHandler;
 
-  const removeBtn: HTMLElement = renderButton('remove', '', ['slim', 'select']);
+  const removeBtn: HTMLElement = renderButton('remove', '', ['slim', 'control', 'remove']);
   removeBtn.id = `remove-btn_${id}`;
   removeBtn.onclick = removeHandler;
 
@@ -24,12 +24,13 @@ export const renderRace = (name: string, color: string, id: number): HTMLElement
   btnsTop.append(selectBtn, removeBtn, carName);
 
   const btnsBottom: HTMLElement = createElem('div', 'race__car-controls');
-  const driveBtn: HTMLElement = renderButton('drive', '', ['race', 'slim', 'select']);
+  const driveBtn: HTMLElement = renderButton('drive', '', ['race', 'slim', 'control', 'drive']);
   driveBtn.id = `drive-btn_${id}`;
   driveBtn.onclick = raceHandler;
 
-  const restartBtn: HTMLElement = renderButton('restart', '', ['slim', 'select']);
+  const restartBtn: HTMLElement = renderButton('restart', '', ['slim', 'control', 'restart']);
   restartBtn.id = `restart-btn_${id}`;
+  restartBtn.classList.add('disabled');
   restartBtn.onclick = restartHandler;
 
   btnsBottom.append(driveBtn, restartBtn);

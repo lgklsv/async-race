@@ -1,5 +1,6 @@
 import { garageState } from '../../const/store';
 import { createElem } from '../../utils/create-element';
+import { toggleBtnType } from '../../utils/toggle-btn-type';
 import { toggleSelectView } from '../../utils/toggle-select-view';
 import styles from './Overlay.module.scss';
 
@@ -14,7 +15,8 @@ export const renderOverlay = (): HTMLElement => {
       garageState.updColorPicker = false;
       return;
     }
-    toggleSelectView(overlay);
+    toggleSelectView(overlay, true);
+    toggleBtnType('.button_restart', false);
 
     nameInput.value = '';
     colorInput.value = '';

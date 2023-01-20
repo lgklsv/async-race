@@ -13,4 +13,6 @@ export const restartCar = async (id: number) => {
   car.style.transform = 'translateX(0px) scaleX(-1)';
   const allBtns = Array.from(race.querySelectorAll('button'));
   allBtns.forEach((el) => el.classList.remove('disabled'));
+  const restartBtn = document.getElementById(`restart-btn_${id}`) as HTMLElement;
+  restartBtn.classList.add('disabled');
 };

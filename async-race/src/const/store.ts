@@ -17,5 +17,5 @@ export const winnersState: Winners = {
   winners,
   totalWinners: num ? +num : 0,
   page: 1,
-  limit: 4,
+  limit: 10,
 };

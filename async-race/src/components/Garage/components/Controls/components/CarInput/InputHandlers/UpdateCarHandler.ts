@@ -2,6 +2,7 @@ import { updateCar } from '../../../../../../../API/update-car';
 import { toggleSelectView } from '../../../../../../../utils/toggle-select-view';
 import { updateGarageUI } from '../../../../../../../utils/update-garageUI';
 import { carIsCar } from '../../../../../../../utils/car-is-car';
+import { toggleBtnType } from '../../../../../../../utils/toggle-btn-type';
 
 export const updateCarHandler = async (e: Event) => {
   e.preventDefault();
@@ -17,7 +18,8 @@ export const updateCarHandler = async (e: Event) => {
     form.reset();
     if (carIsCar(car) && id) {
       const overlay = document.querySelector('.overlay') as HTMLElement;
-      toggleSelectView(overlay);
+      toggleSelectView(overlay, true);
+      toggleBtnType('.button_restart', false);
       await updateCar(+id, car);
       await updateGarageUI();
     }

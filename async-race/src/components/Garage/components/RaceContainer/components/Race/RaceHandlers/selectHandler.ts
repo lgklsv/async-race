@@ -18,7 +18,7 @@ export const selectHandler = async (e: Event) => {
 
   // Add overlay
   const overlay = document.querySelector('.overlay') as HTMLElement;
-  toggleSelectView(overlay);
+  toggleSelectView(overlay, false);
 
   // Add active race
   const curRace = target.closest('.race') as HTMLElement;
