@@ -34,3 +34,7 @@
   transform: scaleX(-1) scale(1.5);
   margin-left: 0.8rem;
 }
+
+.winners-table__name {
+  text-transform: capitalize;
+}

@@ -19,7 +19,7 @@ export const updateGarageUI = async () => {
   garageEl.innerHTML = '';
   garageEl.append(renderRaceContainer());
 
-  const prevBtn = document.getElementById('prev') as HTMLElement;
-  const nextBtn = document.getElementById('next') as HTMLElement;
-  setPaginationBtns(prevBtn, nextBtn);
+  const prevBtn = document.getElementById('garage-prev') as HTMLElement;
+  const nextBtn = document.getElementById('garage-next') as HTMLElement;
+  setPaginationBtns(prevBtn, nextBtn, garageState.page, garageState.limit, garageState.totalCars);
 };

@@ -29,7 +29,7 @@ export const renderRaceContainer = (): HTMLElement => {
 
   const paginateBtns: HTMLElement = createElem('div', 'garage__paginate-btns');
   const prevBtn: HTMLElement = renderButton('prev', '');
-  prevBtn.id = 'prev';
+  prevBtn.id = 'garage-prev';
 
   prevBtn.onclick = () => {
     garageState.page--;
@@ -37,7 +37,7 @@ export const renderRaceContainer = (): HTMLElement => {
   };
 
   const nextBtn: HTMLElement = renderButton('next', '');
-  nextBtn.id = 'next';
+  nextBtn.id = 'garage-next';
 
   nextBtn.onclick = () => {
     garageState.page++;
@@ -46,7 +46,7 @@ export const renderRaceContainer = (): HTMLElement => {
 
   paginateBtns.append(prevBtn, nextBtn);
 
-  setPaginationBtns(prevBtn, nextBtn);
+  setPaginationBtns(prevBtn, nextBtn, garageState.page, garageState.limit, garageState.totalCars);
 
   contolsContainer.append(garageHeading, races, paginateBtns);
 

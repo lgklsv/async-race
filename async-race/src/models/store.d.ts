@@ -21,7 +21,7 @@ interface Winner {
 }
 
 interface Winners {
-  winners: Winner[];
+  winners: (Car & Winner)[];
   totalWinners: number;
   page: number;
   limit: number;

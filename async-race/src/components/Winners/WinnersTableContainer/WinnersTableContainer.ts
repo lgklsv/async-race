@@ -4,6 +4,7 @@ import { setPaginationBtns } from '../../../utils/set-paginaton-btns';
 import styles from './WinnersTableContainer.module.scss';
 import { renderWinnersTable } from './WinnersTable/WinnersTable';
 import { winnersState } from '../../../const/store';
+import { updateWinnersUI } from '../../../utils/update-winnersUI';
 
 export const renderWinnersTableContainer = (): HTMLElement => {
   const contolsContainer: HTMLElement = createElem('div', styles['winners__table']);
@@ -23,25 +24,30 @@ export const renderWinnersTableContainer = (): HTMLElement => {
 
   const paginateBtns: HTMLElement = createElem('div', 'garage__paginate-btns');
   const prevBtn: HTMLElement = renderButton('prev', '');
-  prevBtn.id = 'prev';
+  prevBtn.id = 'winners-prev';
 
-  // prevBtn.onclick = () => {
-  //   winners.page--;
-  //   updatewinnersUI();
-  // };
+  prevBtn.onclick = () => {
+    winnersState.page--;
+    updateWinnersUI();
+  };
 
   const nextBtn: HTMLElement = renderButton('next', '');
-  nextBtn.id = 'next';
+  nextBtn.id = 'winners-next';
 
-  // nextBtn.onclick = () => {
-  //   winners.page++;
-  //   updatewinnersUI();
-  // };
+  nextBtn.onclick = () => {
+    winnersState.page++;
+    updateWinnersUI();
+  };
 
   paginateBtns.append(prevBtn, nextBtn);
 
-  // TODO make this method generic
-  setPaginationBtns(prevBtn, nextBtn);
+  setPaginationBtns(
+    prevBtn,
+    nextBtn,
+    winnersState.page,
+    winnersState.limit,
+    winnersState.totalWinners
+  );
 
   contolsContainer.append(winnersHeading, winnersTable, paginateBtns);
 
