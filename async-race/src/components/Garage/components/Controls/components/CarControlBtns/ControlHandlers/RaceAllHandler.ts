@@ -33,6 +33,8 @@ export const raceAllHandler = async (e: Event) => {
   const root = document.getElementById('app') as HTMLElement;
   const winnerMes = renderWinnerMessage(winner) as HTMLElement;
   root.append(winnerMes);
+  const header = document.querySelector('.header__nav') as HTMLElement;
+  header.classList.add('disabled');
 
   await saveWinner(winner);
   await updateWinnersUI();

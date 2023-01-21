@@ -18,6 +18,8 @@ export const resetAllHandler = async (e: Event) => {
   const allResProm = garageState.cars.map((car) => restartCar(car.id));
   await Promise.all(allResProm);
   // Enable interface
+  const header = document.querySelector('.header__nav') as HTMLElement;
+  header.classList.remove('disabled');
   const raceAllBtn = document.getElementById('race-all') as HTMLElement;
   raceAllBtn.classList.remove('disabled');
 
