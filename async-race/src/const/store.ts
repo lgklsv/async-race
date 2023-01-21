@@ -22,4 +22,6 @@ export const winnersState: Winners = {
   totalWinners: num ? +num : 0,
   page: 1,
   limit: 10,
+  sort: 'wins',
+  order: 'DESC',
 };

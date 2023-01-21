@@ -25,6 +25,8 @@ interface Winners {
   totalWinners: number;
   page: number;
   limit: number;
+  sort: SortTypes;
+  order: OrderTypes;
 }
 
 interface RaceWinner {

@@ -5,7 +5,11 @@ import { winnersState } from '../const/store';
 import { setPaginationBtns } from './set-paginaton-btns';
 
 export const updateWinnersUI = async () => {
-  const { winners, num } = await getWinners(winnersState.page, 'wins', 'DESC');
+  const { winners, num } = await getWinners(
+    winnersState.page,
+    winnersState.sort,
+    winnersState.order
+  );
 
   if (winners.length === 0 && winnersState.page !== 1) {
     winnersState.page--;

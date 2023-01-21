@@ -3,7 +3,7 @@ import { renderButton } from '../Button/Button';
 import { resetAllHandler } from '../Garage/components/Controls/components/CarControlBtns/ControlHandlers/ResetAllHandler';
 import styles from './WinnerMessage.module.scss';
 
-export const renderWinnerMessage = (winner: RaceWinner) => {
+export const renderWinnerMessage = (winner: RaceWinner): HTMLElement => {
   const winnerMes: HTMLElement = createElem('div', styles['winner-message']);
 
   const message: HTMLElement = createElem('h2', 'winner-message__car');

@@ -1,0 +1,28 @@
+@import '/src/theme/variable';
+
+.winners-table__top-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 1rem;
+  background-color: $background;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid $conditionalborder;
+}
+
+.winners-table__column-name {
+  display: inline;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.column-item {
+  padding: 0.5rem;
+}
+
+.winners-table__column-name_clickable {
+  cursor: pointer;
+  &:hover {
+    background-color: $bg-trenary;
+  }
+}
