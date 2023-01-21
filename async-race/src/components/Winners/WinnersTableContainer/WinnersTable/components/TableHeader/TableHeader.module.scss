@@ -2,7 +2,7 @@
 
 .winners-table__top-row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr;
   margin-bottom: 1rem;
   background-color: $background;
   padding: 1rem;

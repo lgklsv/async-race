@@ -7,4 +7,13 @@ $conditionalborder: #444444;
 $red: rgba(254, 0, 0, 0.8);
 $red-hover: rgba(254, 0, 0, 0.6);
 $grey: rgb(204, 204, 204);
-$light-color: rgba(255, 255, 255, .3);
+$light-color: rgba(255, 255, 255, 0.3);
+
+// Fire
+$fireColor: rgb(255, 80, 0);
+$fireColorT: rgba(255, 80, 0, 0);
+$dur: 1s;
+$blur: 0.02em;
+$fireRad: 3em;
+$parts: 50;
+$partSize: 5em;
