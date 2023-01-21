@@ -3,6 +3,7 @@ import { toggleSelectView } from '../../../../../../../utils/toggle-select-view'
 import { updateGarageUI } from '../../../../../../../utils/update-garageUI';
 import { carIsCar } from '../../../../../../../utils/car-is-car';
 import { toggleBtnType } from '../../../../../../../utils/toggle-btn-type';
+import { updateWinnersUI } from '../../../../../../../utils/update-winnersUI';
 
 export const updateCarHandler = async (e: Event) => {
   e.preventDefault();
@@ -22,6 +23,7 @@ export const updateCarHandler = async (e: Event) => {
       toggleBtnType('.button_restart', false);
       await updateCar(+id, car);
       await updateGarageUI();
+      await updateWinnersUI();
     }
   }
 };
