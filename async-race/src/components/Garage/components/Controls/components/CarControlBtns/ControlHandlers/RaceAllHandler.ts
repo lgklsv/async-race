@@ -7,6 +7,7 @@ import { raceCar } from '../../../../../../../utils/race-car';
 import { saveWinner } from '../../../../../../../utils/save-winner';
 import { updateWinnersUI } from '../../../../../../../utils/update-winnersUI';
 import { togglePaginationBtns } from '../../../../../../../utils/toggle-pagination-btns';
+import { renderWinnerMessage } from '../../../../../../WinnerMessage/WinnerMessage';
 
 export const raceAllHandler = async (e: Event) => {
   const target = e.target as HTMLElement;
@@ -28,6 +29,10 @@ export const raceAllHandler = async (e: Event) => {
   const { cars } = garageState;
   const promises = cars.map((car, idx) => raceCar(car.id, data[idx]));
   const winner = await raceAll(promises, cars);
+
+  const root = document.getElementById('app') as HTMLElement;
+  const winnerMes = renderWinnerMessage(winner) as HTMLElement;
+  root.append(winnerMes);
 
   await saveWinner(winner);
   await updateWinnersUI();

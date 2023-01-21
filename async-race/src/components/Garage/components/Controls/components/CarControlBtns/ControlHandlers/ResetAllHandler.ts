@@ -6,6 +6,14 @@ import { togglePaginationBtns } from '../../../../../../../utils/toggle-paginati
 export const resetAllHandler = async (e: Event) => {
   const target = e.target as HTMLElement;
   target.classList.add('disabled');
+  togglePaginationBtns(
+    false,
+    'garage-prev',
+    'garage-next',
+    garageState.page,
+    garageState.limit,
+    garageState.totalCars
+  );
 
   const allResProm = garageState.cars.map((car) => restartCar(car.id));
   await Promise.all(allResProm);
@@ -23,4 +31,9 @@ export const resetAllHandler = async (e: Event) => {
     garageState.totalCars
   );
   target.classList.remove('disabled');
+
+  const winnerMesEL = document.querySelector('.winner-message') as HTMLElement;
+  if (winnerMesEL) {
+    winnerMesEL.remove();
+  }
 };
