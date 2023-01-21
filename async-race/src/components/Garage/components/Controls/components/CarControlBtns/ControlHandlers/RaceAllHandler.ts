@@ -6,6 +6,7 @@ import { raceAll } from '../../../../../../../utils/race-all';
 import { raceCar } from '../../../../../../../utils/race-car';
 import { saveWinner } from '../../../../../../../utils/save-winner';
 import { updateWinnersUI } from '../../../../../../../utils/update-winnersUI';
+import { togglePaginationBtns } from '../../../../../../../utils/toggle-pagination-btns';
 
 export const raceAllHandler = async (e: Event) => {
   const target = e.target as HTMLElement;
@@ -13,6 +14,14 @@ export const raceAllHandler = async (e: Event) => {
 
   toggleAllBtns(false);
   toggleInterfaceBtns(false);
+  togglePaginationBtns(
+    false,
+    'garage-prev',
+    'garage-next',
+    garageState.page,
+    garageState.limit,
+    garageState.totalCars
+  );
 
   const data = await Promise.all(garageState.cars.map((car) => startStopEngine(car.id, 'started')));
 

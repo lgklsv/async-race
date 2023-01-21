@@ -8,9 +8,7 @@ export const renderOverlay = (): HTMLElement => {
   const overlay: HTMLElement = createElem('div', styles['overlay']);
 
   overlay.onclick = () => {
-    const updateForm = document.getElementById('update') as HTMLElement;
-    const nameInput = updateForm.querySelector('#name') as HTMLInputElement;
-    const colorInput = updateForm.querySelector('#color') as HTMLInputElement;
+    const updateForm = document.getElementById('update') as HTMLFormElement;
     if (garageState.updColorPicker) {
       garageState.updColorPicker = false;
       return;
@@ -18,8 +16,7 @@ export const renderOverlay = (): HTMLElement => {
     toggleSelectView(overlay, true);
     toggleBtnType('.button_restart', false);
 
-    nameInput.value = '';
-    colorInput.value = '';
+    updateForm.reset();
   };
 
   return overlay;

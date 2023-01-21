@@ -5,6 +5,6 @@ export const restartHandler = async (e: Event) => {
   target.classList.add('disabled');
   if (target.id) {
     const id = target.id.split('_')[1];
-    restartCar(+id);
+    await restartCar(+id);
   }
 };

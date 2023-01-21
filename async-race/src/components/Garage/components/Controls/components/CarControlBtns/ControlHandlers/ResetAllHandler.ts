@@ -1,6 +1,7 @@
 import { garageState } from '../../../../../../../const/store';
 import { restartCar } from '../../../../../../../utils/restart-car';
 import { toggleInterfaceBtns } from '../../../../../../../utils/toggle-interface-btns';
+import { togglePaginationBtns } from '../../../../../../../utils/toggle-pagination-btns';
 
 export const resetAllHandler = async (e: Event) => {
   const target = e.target as HTMLElement;
@@ -13,5 +14,13 @@ export const resetAllHandler = async (e: Event) => {
   raceAllBtn.classList.remove('disabled');
 
   toggleInterfaceBtns(true);
+  togglePaginationBtns(
+    true,
+    'garage-prev',
+    'garage-next',
+    garageState.page,
+    garageState.limit,
+    garageState.totalCars
+  );
   target.classList.remove('disabled');
 };
