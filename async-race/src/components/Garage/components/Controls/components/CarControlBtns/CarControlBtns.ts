@@ -1,7 +1,7 @@
-import { createCar } from '../../../../../../API/create-car';
-import { createElem } from '../../../../../../utils/create-element';
+import { createCar } from '../../../../../../API/garage/create-car';
+import { createElem } from '../../../../../../utils/element-render/create-element';
 import { generateRandomCars } from '../../../../../../utils/generate-random-cars';
-import { updateGarageUI } from '../../../../../../utils/update-garageUI';
+import { updateGarageUI } from '../../../../../../utils/UI/update-garageUI';
 import { renderButton } from '../../../../../Button/Button';
 import styles from './CarControlBtns.module.scss';
 import { raceAllHandler } from './ControlHandlers/RaceAllHandler';

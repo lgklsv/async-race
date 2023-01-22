@@ -1,5 +1,5 @@
-import { createElem } from '../../utils/create-element';
-import { createLink } from '../../utils/create-link-element';
+import { createElem } from '../../utils/element-render/create-element';
+import { createLink } from '../../utils/element-render/create-link-element';
 import styles from './Footer.module.scss';
 
 export const renderFooter = (): HTMLElement => {

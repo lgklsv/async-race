@@ -1,5 +1,5 @@
 import { winnersState } from '../../../../../../const/store';
-import { updateWinnersUI } from '../../../../../../utils/update-winnersUI';
+import { updateWinnersUI } from '../../../../../../utils/UI/update-winnersUI';
 
 export const sortingHandler = async (e: Event) => {
   const target = e.target as HTMLElement;

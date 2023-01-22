@@ -1,8 +1,8 @@
-import { createElem } from '../../../utils/create-element';
+import { createElem } from '../../../utils/element-render/create-element';
 import styles from './WinnersTableContainer.module.scss';
 import { renderWinnersTable } from './WinnersTable/WinnersTable';
 import { winnersState } from '../../../const/store';
-import { updateWinnersUI } from '../../../utils/update-winnersUI';
+import { updateWinnersUI } from '../../../utils/UI/update-winnersUI';
 import { renderPagination } from '../../Pagination/Pagination';
 
 export const renderWinnersTableContainer = (): HTMLElement => {

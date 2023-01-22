@@ -1,9 +1,9 @@
-import { updateCar } from '../../../../../../../API/update-car';
-import { toggleSelectView } from '../../../../../../../utils/toggle-select-view';
-import { updateGarageUI } from '../../../../../../../utils/update-garageUI';
+import { updateCar } from '../../../../../../../API/garage/update-car';
+import { toggleSelectView } from '../../../../../../../utils/UI/toggle-select-view';
+import { updateGarageUI } from '../../../../../../../utils/UI/update-garageUI';
 import { carIsCar } from '../../../../../../../utils/car-is-car';
-import { toggleBtnType } from '../../../../../../../utils/toggle-btn-type';
-import { updateWinnersUI } from '../../../../../../../utils/update-winnersUI';
+import { toggleBtnType } from '../../../../../../../utils/UI/toggle-btn-type';
+import { updateWinnersUI } from '../../../../../../../utils/UI/update-winnersUI';
 
 export const updateCarHandler = async (e: Event) => {
   e.preventDefault();

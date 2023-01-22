@@ -1,4 +1,4 @@
-import { GARAGE_URL } from '../const/api-urls';
+import { GARAGE_URL } from '../../const/api-urls';
 
 export const updateCar = async (id: number, body: NewCar) => {
   await fetch(`${GARAGE_URL}/${id}`, {

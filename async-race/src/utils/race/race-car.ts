@@ -1,9 +1,9 @@
-import { getDistanceBetween } from './get-distance-between';
-import { garageState } from '../const/store';
+import { getDistanceBetween } from '../get-distance-between';
+import { garageState } from '../../const/store';
 import { animateCar } from './animate-car';
-import { driveCar } from '../API/drive-car';
-import { brokenCarImage } from '../assets/images/broken-car';
-import { renderFire } from '../components/Garage/components/RaceContainer/components/Race/Fire/Fire';
+import { driveCar } from '../../API/engine/drive-car';
+import { brokenCarImage } from '../../assets/images/broken-car';
+import { renderFire } from '../../components/Garage/components/RaceContainer/components/Race/Fire/Fire';
 
 export const raceCar = async (id: number, carParams: EngineParams): Promise<DriveMod> => {
   const race = document.getElementById(id.toString()) as HTMLElement;

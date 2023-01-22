@@ -1,4 +1,4 @@
-import { WINNERS_URL } from '../const/api-urls';
+import { WINNERS_URL } from '../../const/api-urls';
 
 export const updateWinner = async (id: number, body: UpdateWinner) => {
   (

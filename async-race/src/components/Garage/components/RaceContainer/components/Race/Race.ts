@@ -1,4 +1,4 @@
-import { createElem } from '../../../../../../utils/create-element';
+import { createElem } from '../../../../../../utils/element-render/create-element';
 import { renderButton } from '../../../../../Button/Button';
 import styles from './Race.module.scss';
 import { removeHandler } from './RaceHandlers/removeHandler';

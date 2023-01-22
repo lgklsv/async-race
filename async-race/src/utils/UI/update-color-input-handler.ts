@@ -1,4 +1,4 @@
-import { garageState } from '../const/store';
+import { garageState } from '../../const/store';
 
 export const updateColorInputHandler = (form: HTMLElement) => {
   const colorInput = form.querySelector('#color') as HTMLInputElement;

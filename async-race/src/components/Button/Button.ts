@@ -1,4 +1,4 @@
-import { createElem } from '../../utils/create-element';
+import { createElem } from '../../utils/element-render/create-element';
 import styles from './Button.module.scss';
 
 export const renderButton = (

@@ -1,5 +1,5 @@
-import { getCar } from '../../../../../../../API/get-car';
-import { toggleSelectView } from '../../../../../../../utils/toggle-select-view';
+import { getCar } from '../../../../../../../API/garage/get-car';
+import { toggleSelectView } from '../../../../../../../utils/UI/toggle-select-view';
 
 export const selectHandler = async (e: Event) => {
   const target = e.target as HTMLButtonElement;

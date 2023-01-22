@@ -1,7 +1,7 @@
 import { garageState } from '../../const/store';
-import { createElem } from '../../utils/create-element';
-import { toggleBtnType } from '../../utils/toggle-btn-type';
-import { toggleSelectView } from '../../utils/toggle-select-view';
+import { createElem } from '../../utils/element-render/create-element';
+import { toggleBtnType } from '../../utils/UI/toggle-btn-type';
+import { toggleSelectView } from '../../utils/UI/toggle-select-view';
 import styles from './Overlay.module.scss';
 
 export const renderOverlay = (): HTMLElement => {

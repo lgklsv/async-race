@@ -1,8 +1,8 @@
-import { deleteCar } from '../../../../../../../API/delete-car';
-import { updateGarageUI } from '../../../../../../../utils/update-garageUI';
-import { getWinner } from '../../../../../../../API/get-winner';
-import { deleteWinner } from '../../../../../../../API/delete-winner';
-import { updateWinnersUI } from '../../../../../../../utils/update-winnersUI';
+import { deleteCar } from '../../../../../../../API/garage/delete-car';
+import { updateGarageUI } from '../../../../../../../utils/UI/update-garageUI';
+import { getWinner } from '../../../../../../../API/winners/get-winner';
+import { deleteWinner } from '../../../../../../../API/winners/delete-winner';
+import { updateWinnersUI } from '../../../../../../../utils/UI/update-winnersUI';
 
 export const removeHandler = async (e: Event) => {
   const target = e.target as HTMLButtonElement;

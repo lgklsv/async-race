@@ -1,5 +1,5 @@
 import { winnersState } from '../../../../../../const/store';
-import { createElem } from '../../../../../../utils/create-element';
+import { createElem } from '../../../../../../utils/element-render/create-element';
 import { sortingHandler } from './SortingHandler';
 import styles from './TableHeader.module.scss';
 

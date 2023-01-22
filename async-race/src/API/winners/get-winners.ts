@@ -1,4 +1,4 @@
-import { WINNERS_URL } from '../const/api-urls';
+import { WINNERS_URL } from '../../const/api-urls';
 
 export const getWinners = async (
   page: number,

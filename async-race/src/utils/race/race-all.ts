@@ -1,4 +1,4 @@
-import { garageState } from '../const/store';
+import { garageState } from '../../const/store';
 import { cancelable } from './cancelable';
 
 export const raceAll = async (promises: Promise<DriveMod>[], cars: Car[]): Promise<RaceWinner> => {

@@ -1,6 +1,6 @@
-import { getCar } from '../API/get-car';
-import { getCars } from '../API/get-cars';
-import { getWinners } from '../API/get-winners';
+import { getCar } from '../API/garage/get-car';
+import { getCars } from '../API/garage/get-cars';
+import { getWinners } from '../API/winners/get-winners';
 import {
   DEFAULT_ID,
   DEFAULT_ORDER,

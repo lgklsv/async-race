@@ -1,4 +1,4 @@
-import { createElem } from '../../../../utils/create-element';
+import { createElem } from '../../../../utils/element-render/create-element';
 import { winnersState } from '../../../../const/store';
 import styles from './WinnersTable.module.scss';
 import { renderTableHeader } from './components/TableHeader/TableHeader';

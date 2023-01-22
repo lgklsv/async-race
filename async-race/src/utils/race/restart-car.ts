@@ -1,6 +1,6 @@
-import { garageState } from '../const/store';
-import { startStopEngine } from '../API/start-stop-engine';
-import { carImage } from '../assets/images/car';
+import { garageState } from '../../const/store';
+import { startStopEngine } from '../../API/engine/start-stop-engine';
+import { carImage } from '../../assets/images/car';
 
 export const restartCar = async (id: number) => {
   const race = document.getElementById(id.toString()) as HTMLElement;

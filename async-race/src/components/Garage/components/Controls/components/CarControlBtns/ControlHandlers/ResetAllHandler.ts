@@ -1,7 +1,7 @@
 import { garageState } from '../../../../../../../const/store';
-import { restartCar } from '../../../../../../../utils/restart-car';
-import { toggleInterfaceBtns } from '../../../../../../../utils/toggle-interface-btns';
-import { togglePaginationBtns } from '../../../../../../../utils/toggle-pagination-btns';
+import { restartCar } from '../../../../../../../utils/race/restart-car';
+import { toggleInterfaceBtns } from '../../../../../../../utils/UI/toggle-interface-btns';
+import { togglePaginationBtns } from '../../../../../../../utils/UI/toggle-pagination-btns';
 
 export const resetAllHandler = async (e: Event) => {
   const target = e.target as HTMLElement;

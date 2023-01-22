@@ -1,13 +1,13 @@
-import { toggleInterfaceBtns } from '../../../../../../../utils/toggle-interface-btns';
+import { toggleInterfaceBtns } from '../../../../../../../utils/UI/toggle-interface-btns';
 import { garageState } from '../../../../../../../const/store';
-import { startStopEngine } from '../../../../../../../API/start-stop-engine';
-import { raceAll } from '../../../../../../../utils/race-all';
-import { raceCar } from '../../../../../../../utils/race-car';
-import { saveWinner } from '../../../../../../../utils/save-winner';
-import { updateWinnersUI } from '../../../../../../../utils/update-winnersUI';
-import { togglePaginationBtns } from '../../../../../../../utils/toggle-pagination-btns';
+import { startStopEngine } from '../../../../../../../API/engine/start-stop-engine';
+import { raceAll } from '../../../../../../../utils/race/race-all';
+import { raceCar } from '../../../../../../../utils/race/race-car';
+import { saveWinner } from '../../../../../../../utils/race/save-winner';
+import { updateWinnersUI } from '../../../../../../../utils/UI/update-winnersUI';
+import { togglePaginationBtns } from '../../../../../../../utils/UI/toggle-pagination-btns';
 import { renderWinnerMessage } from '../../../../../../WinnerMessage/WinnerMessage';
-import { toggleBtnType } from '../../../../../../../utils/toggle-btn-type';
+import { toggleBtnType } from '../../../../../../../utils/UI/toggle-btn-type';
 
 export const raceAllHandler = async (e: Event) => {
   const target = e.target as HTMLElement;

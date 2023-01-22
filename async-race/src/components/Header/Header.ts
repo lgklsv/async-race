@@ -1,4 +1,4 @@
-import { createElem } from '../../utils/create-element';
+import { createElem } from '../../utils/element-render/create-element';
 import styles from './Header.module.scss';
 
 export const renderHeader = (): HTMLElement => {

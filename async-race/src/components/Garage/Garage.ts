@@ -1,4 +1,4 @@
-import { createElem } from '../../utils/create-element';
+import { createElem } from '../../utils/element-render/create-element';
 import { renderControls } from './components/Controls/Controls';
 import { renderRaceContainer } from './components/RaceContainer/RaceContainer';
 import styles from './Garage.module.scss';

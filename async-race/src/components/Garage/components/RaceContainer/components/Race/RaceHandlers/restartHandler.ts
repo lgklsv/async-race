@@ -1,4 +1,4 @@
-import { restartCar } from '../../../../../../../utils/restart-car';
+import { restartCar } from '../../../../../../../utils/race/restart-car';
 
 export const restartHandler = async (e: Event) => {
   const target = e.target as HTMLButtonElement;

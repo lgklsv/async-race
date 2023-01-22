@@ -1,4 +1,4 @@
-import { createElem } from '../../utils/create-element';
+import { createElem } from '../../utils/element-render/create-element';
 import { renderButton } from '../Button/Button';
 import { resetAllHandler } from '../Garage/components/Controls/components/CarControlBtns/ControlHandlers/ResetAllHandler';
 import styles from './WinnerMessage.module.scss';

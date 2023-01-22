@@ -1,8 +1,8 @@
-import { createElem } from '../../../../utils/create-element';
+import { createElem } from '../../../../utils/element-render/create-element';
 import { renderRace } from './components/Race/Race';
 import styles from './RaceContainer.module.scss';
 import { garageState } from '../../../../const/store';
-import { updateGarageUI } from '../../../../utils/update-garageUI';
+import { updateGarageUI } from '../../../../utils/UI/update-garageUI';
 import { renderPagination } from '../../../Pagination/Pagination';
 
 export const renderRaceContainer = (): HTMLElement => {

@@ -1,5 +1,5 @@
-import { createCar } from '../../../../../../../API/create-car';
-import { updateGarageUI } from '../../../../../../../utils/update-garageUI';
+import { createCar } from '../../../../../../../API/garage/create-car';
+import { updateGarageUI } from '../../../../../../../utils/UI/update-garageUI';
 import { carIsCar } from '../../../../../../../utils/car-is-car';
 
 export const createCarHandler = async (e: Event) => {

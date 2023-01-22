@@ -1,4 +1,4 @@
-import { GARAGE_URL } from '../const/api-urls';
+import { GARAGE_URL } from '../../const/api-urls';
 
 export const getCars = async (page: number, limit = 7): Promise<GetCars> => {
   const res = await fetch(`${GARAGE_URL}?_page=${page}&_limit=${limit}`);

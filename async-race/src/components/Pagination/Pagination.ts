@@ -1,5 +1,5 @@
-import { createElem } from '../../utils/create-element';
-import { setPaginationBtns } from '../../utils/set-paginaton-btns';
+import { createElem } from '../../utils/element-render/create-element';
+import { setPaginationBtns } from '../../utils/UI/set-paginaton-btns';
 import { renderButton } from '../Button/Button';
 import style from './Pagination.module.scss';
 

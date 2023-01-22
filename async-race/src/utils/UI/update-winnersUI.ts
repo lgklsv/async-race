@@ -1,7 +1,7 @@
-import { getCar } from '../API/get-car';
-import { getWinners } from '../API/get-winners';
-import { renderWinnersTableContainer } from '../components/Winners/WinnersTableContainer/WinnersTableContainer';
-import { winnersState } from '../const/store';
+import { getCar } from '../../API/garage/get-car';
+import { getWinners } from '../../API/winners/get-winners';
+import { renderWinnersTableContainer } from '../../components/Winners/WinnersTableContainer/WinnersTableContainer';
+import { winnersState } from '../../const/store';
 import { setPaginationBtns } from './set-paginaton-btns';
 
 export const updateWinnersUI = async () => {

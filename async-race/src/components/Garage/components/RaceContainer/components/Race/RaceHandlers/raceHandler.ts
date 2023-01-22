@@ -1,6 +1,6 @@
-import { raceCar } from '../../../../../../../utils/race-car';
-import { startStopEngine } from '../../../../../../../API/start-stop-engine';
-import { toggleInterfaceBtns } from '../../../../../../../utils/toggle-interface-btns';
+import { raceCar } from '../../../../../../../utils/race/race-car';
+import { startStopEngine } from '../../../../../../../API/engine/start-stop-engine';
+import { toggleInterfaceBtns } from '../../../../../../../utils/UI/toggle-interface-btns';
 import { garageState } from '../../../../../../../const/store';
 
 export const raceHandler = async (e: Event) => {
@@ -8,12 +8,11 @@ export const raceHandler = async (e: Event) => {
   if (target.id) {
     const id = target.id.split('_')[1];
     const race = document.getElementById(id.toString()) as HTMLElement;
-
+    garageState.breakCars = true;
     // Disable btns on current race
     const allBtns = Array.from(race.querySelectorAll('button'));
     allBtns.forEach((el) => el.classList.add('disabled'));
 
-    garageState.breakCars = true;
     // Disable interface
     toggleInterfaceBtns(false);
 

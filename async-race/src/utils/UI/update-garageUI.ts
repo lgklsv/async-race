@@ -1,6 +1,6 @@
-import { getCars } from '../API/get-cars';
-import { garageState } from '../const/store';
-import { renderRaceContainer } from '../components/Garage/components/RaceContainer/RaceContainer';
+import { getCars } from '../../API/garage/get-cars';
+import { garageState } from '../../const/store';
+import { renderRaceContainer } from '../../components/Garage/components/RaceContainer/RaceContainer';
 import { setPaginationBtns } from './set-paginaton-btns';
 
 export const updateGarageUI = async () => {

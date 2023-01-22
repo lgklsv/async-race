@@ -1,6 +1,6 @@
-import { createWinner } from '../API/create-winner';
-import { getWinner } from '../API/get-winner';
-import { updateWinner } from '../API/update-winner';
+import { createWinner } from '../../API/winners/create-winner';
+import { getWinner } from '../../API/winners/get-winner';
+import { updateWinner } from '../../API/winners/update-winner';
 
 export const saveWinner = async (winner: RaceWinner) => {
   const winnerExists = await getWinner(winner.winner.id);
