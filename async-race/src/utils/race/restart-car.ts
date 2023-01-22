@@ -14,6 +14,7 @@ export const restartCar = async (id: number) => {
   carEl.style.transform = 'translateX(0px) scaleX(-1)';
   const carData = garageState.cars.find((car) => car.id === id);
   if (carData) {
+    carEl.classList.remove('race__car_broken');
     carEl.innerHTML = carImage(carData.color);
   }
 

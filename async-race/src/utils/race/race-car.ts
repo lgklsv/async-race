@@ -21,6 +21,7 @@ export const raceCar = async (id: number, carParams: EngineParams): Promise<Driv
     if (garageState.breakCars) {
       const carData = garageState.cars.find((car) => car.id === id);
       if (carData) {
+        carEl.classList.add('race__car_broken');
         carEl.innerHTML = brokenCarImage(carData.color);
       }
       const fire: HTMLElement = renderFire();
