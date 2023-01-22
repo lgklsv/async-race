@@ -18,7 +18,7 @@ const winnersData = winnersCars.map((el, index) => Object.assign(el, winners[ind
 
 export const garageState: Garage = {
   cars: items,
-  totalCars: count ? +count : 0,
+  total: count ? +count : 0,
   page: DEFAULT_PAGE,
   limit: GARAGE_PAGE_LIMIT,
   updColorPicker: false,
@@ -29,7 +29,7 @@ export const garageState: Garage = {
 
 export const winnersState: Winners = {
   winners: winnersData,
-  totalWinners: num ? +num : 0,
+  total: num ? +num : 0,
   page: DEFAULT_PAGE,
   limit: WINNERS_PAGE_LIMIT,
   sort: DEFAULT_SORT,

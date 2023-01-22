@@ -12,7 +12,7 @@ export const resetAllHandler = async (e: Event) => {
     'garage-next',
     garageState.page,
     garageState.limit,
-    garageState.totalCars
+    garageState.total
   );
 
   garageState.breakCars = false;
@@ -35,7 +35,7 @@ export const resetAllHandler = async (e: Event) => {
     'garage-next',
     garageState.page,
     garageState.limit,
-    garageState.totalCars
+    garageState.total
   );
   target.classList.remove('disabled');
 

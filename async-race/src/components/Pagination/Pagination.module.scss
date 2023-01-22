@@ -1,0 +1,9 @@
+@import '/src/theme/variable';
+
+.paginate-btns {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid $conditionalborder;
+}

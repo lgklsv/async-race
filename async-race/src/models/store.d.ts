@@ -10,7 +10,7 @@ interface CancelablePromise<T> {
 }
 interface Garage {
   cars: Car[];
-  totalCars: number;
+  total: number;
   page: number;
   limit: number;
   updColorPicker: boolean;
@@ -29,7 +29,7 @@ interface Winner {
 
 interface Winners {
   winners: (Car & Winner)[];
-  totalWinners: number;
+  total: number;
   page: number;
   limit: number;
   sort: SortTypes;

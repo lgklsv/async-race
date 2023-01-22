@@ -21,7 +21,7 @@ export const raceAllHandler = async (e: Event) => {
     'garage-next',
     garageState.page,
     garageState.limit,
-    garageState.totalCars
+    garageState.total
   );
 
   garageState.breakCars = true;

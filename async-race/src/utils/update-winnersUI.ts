@@ -21,7 +21,7 @@ export const updateWinnersUI = async () => {
   const winnersData = winnersCars.map((el, index) => Object.assign(el, winners[index]));
 
   winnersState.winners = winnersData;
-  winnersState.totalWinners = num ? +num : 0;
+  winnersState.total = num ? +num : 0;
 
   const winnersEl = document.querySelector('.winners-section') as HTMLElement;
   winnersEl.innerHTML = '';
@@ -29,11 +29,5 @@ export const updateWinnersUI = async () => {
 
   const prevBtn = document.getElementById('winners-prev') as HTMLElement;
   const nextBtn = document.getElementById('winners-next') as HTMLElement;
-  setPaginationBtns(
-    prevBtn,
-    nextBtn,
-    winnersState.page,
-    winnersState.limit,
-    winnersState.totalWinners
-  );
+  setPaginationBtns(prevBtn, nextBtn, winnersState.page, winnersState.limit, winnersState.total);
 };

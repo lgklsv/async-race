@@ -13,7 +13,7 @@ export const updateGarageUI = async () => {
   }
 
   garageState.cars = items;
-  garageState.totalCars = count ? +count : 0;
+  garageState.total = count ? +count : 0;
 
   const garageEl = document.querySelector('.garage-section') as HTMLElement;
   garageEl.innerHTML = '';
@@ -21,5 +21,5 @@ export const updateGarageUI = async () => {
 
   const prevBtn = document.getElementById('garage-prev') as HTMLElement;
   const nextBtn = document.getElementById('garage-next') as HTMLElement;
-  setPaginationBtns(prevBtn, nextBtn, garageState.page, garageState.limit, garageState.totalCars);
+  setPaginationBtns(prevBtn, nextBtn, garageState.page, garageState.limit, garageState.total);
 };
