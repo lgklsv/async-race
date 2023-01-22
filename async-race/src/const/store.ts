@@ -15,6 +15,8 @@ export const garageState: Garage = {
   limit: 7,
   updColorPicker: false,
   animation: {},
+  cancelObj: null,
+  breakCars: false,
 };
 
 export const winnersState: Winners = {

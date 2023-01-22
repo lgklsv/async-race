@@ -24,6 +24,8 @@ export const raceAllHandler = async (e: Event) => {
     garageState.totalCars
   );
 
+  garageState.breakCars = true;
+
   const data = await Promise.all(garageState.cars.map((car) => startStopEngine(car.id, 'started')));
 
   const { cars } = garageState;

@@ -1,5 +1,12 @@
+import { garageState } from '../const/store';
+import { cancelable } from './cancelable';
+
 export const raceAll = async (promises: Promise<DriveMod>[], cars: Car[]): Promise<RaceWinner> => {
-  const { success, id, time } = await Promise.race(promises);
+  const cancelablePromise = cancelable(Promise.race(promises));
+
+  garageState.cancelObj = cancelablePromise;
+
+  const { success, id, time } = await cancelablePromise;
 
   if (!success) {
     const failedCar = cars.findIndex((car) => car.id === id);

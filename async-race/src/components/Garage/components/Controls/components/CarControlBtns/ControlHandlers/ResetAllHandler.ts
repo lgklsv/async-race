@@ -15,6 +15,11 @@ export const resetAllHandler = async (e: Event) => {
     garageState.totalCars
   );
 
+  garageState.breakCars = false;
+  if (garageState.cancelObj) {
+    garageState.cancelObj.cancel();
+  }
+
   const allResProm = garageState.cars.map((car) => restartCar(car.id));
   await Promise.all(allResProm);
   // Enable interface

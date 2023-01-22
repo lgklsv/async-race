@@ -1,6 +1,7 @@
 import { raceCar } from '../../../../../../../utils/race-car';
 import { startStopEngine } from '../../../../../../../API/start-stop-engine';
 import { toggleInterfaceBtns } from '../../../../../../../utils/toggle-interface-btns';
+import { garageState } from '../../../../../../../const/store';
 
 export const raceHandler = async (e: Event) => {
   const target = e.target as HTMLButtonElement;
@@ -12,6 +13,7 @@ export const raceHandler = async (e: Event) => {
     const allBtns = Array.from(race.querySelectorAll('button'));
     allBtns.forEach((el) => el.classList.add('disabled'));
 
+    garageState.breakCars = true;
     // Disable interface
     toggleInterfaceBtns(false);
 

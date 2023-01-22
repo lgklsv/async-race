@@ -18,12 +18,14 @@ export const raceCar = async (id: number, carParams: EngineParams): Promise<Driv
   const res = await driveCar(+id);
   const { success } = res;
   if (!success) {
-    const carData = garageState.cars.find((car) => car.id === id);
-    if (carData) {
-      carEl.innerHTML = brokenCarImage(carData.color);
+    if (garageState.breakCars) {
+      const carData = garageState.cars.find((car) => car.id === id);
+      if (carData) {
+        carEl.innerHTML = brokenCarImage(carData.color);
+      }
+      const fire: HTMLElement = renderFire();
+      carEl.append(fire);
     }
-    const fire: HTMLElement = renderFire();
-    carEl.append(fire);
 
     window.cancelAnimationFrame(garageState.animation[id].id);
   }

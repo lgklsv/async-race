@@ -3,6 +3,11 @@ interface Car {
   color: string;
   id: number;
 }
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+interface CancelablePromise<T> {
+  cancel(): void;
+}
 interface Garage {
   cars: Car[];
   totalCars: number;
@@ -12,6 +17,8 @@ interface Garage {
   animation: {
     [key: string]: AnimationState;
   };
+  cancelObj: CancelablePromise<DriveMod> | null;
+  breakCars: boolean;
 }
 
 interface Winner {
