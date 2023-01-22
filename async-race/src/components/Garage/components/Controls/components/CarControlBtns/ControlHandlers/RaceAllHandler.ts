@@ -1,4 +1,3 @@
-import { toggleAllBtns } from '../../../../../../../utils/toggle-all-btns';
 import { toggleInterfaceBtns } from '../../../../../../../utils/toggle-interface-btns';
 import { garageState } from '../../../../../../../const/store';
 import { startStopEngine } from '../../../../../../../API/start-stop-engine';
@@ -8,12 +7,13 @@ import { saveWinner } from '../../../../../../../utils/save-winner';
 import { updateWinnersUI } from '../../../../../../../utils/update-winnersUI';
 import { togglePaginationBtns } from '../../../../../../../utils/toggle-pagination-btns';
 import { renderWinnerMessage } from '../../../../../../WinnerMessage/WinnerMessage';
+import { toggleBtnType } from '../../../../../../../utils/toggle-btn-type';
 
 export const raceAllHandler = async (e: Event) => {
   const target = e.target as HTMLElement;
   target.classList.add('disabled');
 
-  toggleAllBtns(false);
+  toggleBtnType('.button_control', false);
   toggleInterfaceBtns(false);
   togglePaginationBtns(
     false,

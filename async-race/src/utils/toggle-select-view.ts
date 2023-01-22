@@ -1,10 +1,10 @@
-import { toggleAllBtns } from './toggle-all-btns';
+import { toggleBtnType } from './toggle-btn-type';
 
 export const toggleSelectView = (overlay: HTMLElement, btns: boolean): void => {
   const allRaces = Array.from(document.querySelectorAll('.race'));
   allRaces.forEach((race) => race.classList.remove('race_active'));
 
-  toggleAllBtns(btns);
+  toggleBtnType('.button_control', btns);
 
   overlay.classList.toggle('active');
 
