@@ -8,7 +8,7 @@ export const renderTableHeader = (): HTMLElement => {
 
   const numberCont: HTMLElement = createElem('div', 'winners-table__column-wrap');
   const number: HTMLElement = createElem('p', 'winners-table__column-name');
-  number.innerHTML = 'Number';
+  number.innerHTML = '№';
   numberCont.append(number);
 
   const carCont: HTMLElement = createElem('div', 'winners-table__column-wrap');
@@ -36,7 +36,7 @@ export const renderTableHeader = (): HTMLElement => {
   const bestTime: HTMLElement = createElem('p', 'winners-table__column-name');
   bestTime.classList.add('winners-table__column-name_clickable');
   bestTime.id = 'time';
-  bestTime.innerHTML = `Best time (sec) ${winnersState.sort === 'time' ? arrow : ''}`;
+  bestTime.innerHTML = `Best time (s) ${winnersState.sort === 'time' ? arrow : ''}`;
   bestTimeCont.append(bestTime);
 
   bestTime.onclick = sortingHandler;

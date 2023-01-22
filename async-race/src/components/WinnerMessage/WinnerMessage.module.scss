@@ -12,10 +12,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.winner-message__container {
+  background-color: $background;
+  border: 1px solid $conditionalborder;
+  border-radius: 5px;
+  padding: 1rem;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
 .button_close-message {
   pointer-events: all;
+}
+
+@media (max-width: 500px) {
+  .winner-message__car {
+    font-size: 1.2rem;
+  }
 }
 

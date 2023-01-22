@@ -28,3 +28,20 @@
 .winners-table__name {
   text-transform: capitalize;
 }
+
+@media (max-width: 650px) {
+  .winners-table__row {
+    grid-template-columns: 0.3fr 1fr 1.5fr 0.5fr 0.5fr;
+  }
+
+  .winners-table__car {
+    transform: scaleX(-1) scale(0.5);
+  }
+}
+
+@media (max-width: 575px) {
+  .winners-table__row{
+    grid-template-columns: 0.3fr 0.5fr 1fr 0.5fr 0.75fr;
+    font-size: 0.8rem;
+  }
+}

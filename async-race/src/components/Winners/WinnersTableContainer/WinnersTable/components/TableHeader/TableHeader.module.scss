@@ -26,3 +26,18 @@
     background-color: $bg-trenary;
   }
 }
+
+@media (max-width: 650px) {
+  .winners-table__top-row {
+    grid-template-columns: 0.5fr 0.9fr 1.5fr 0.5fr 0.75fr;
+    font-size: 0.8rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .winners-table__top-row {
+    grid-template-columns: 0.5fr 0.5fr 0.6fr 0.5fr 0.66fr;
+  }
+}
