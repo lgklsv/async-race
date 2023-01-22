@@ -17,12 +17,13 @@
   width: 100%;
   display: grid;
   grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr;
+  height: 70px;
 }
 
 .winners-table__car {
   justify-self: flex-start;
   transform: scaleX(-1);
-  margin-left: 1rem;
+  margin-left: 2.2rem;
 }
 
 .winners-table__name {
@@ -35,7 +36,12 @@
   }
 
   .winners-table__car {
-    transform: scaleX(-1) scale(0.5);
+    transform: scaleX(-1) scale(0.5) translateY(-20px);
+  }
+
+  .winners-table__body {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -43,5 +49,9 @@
   .winners-table__row{
     grid-template-columns: 0.3fr 0.5fr 1fr 0.5fr 0.75fr;
     font-size: 0.8rem;
+  }
+
+  .winners-table__car {
+    transform: scaleX(-1) scale(0.5) translateY(-25px);
   }
 }
