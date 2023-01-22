@@ -3,9 +3,7 @@ import { cancelable } from './cancelable';
 
 export const raceAll = async (promises: Promise<DriveMod>[], cars: Car[]): Promise<RaceWinner> => {
   const cancelablePromise = cancelable(Promise.race(promises));
-
   garageState.cancelObj = cancelablePromise;
-
   const { success, id, time } = await cancelablePromise;
 
   if (!success) {

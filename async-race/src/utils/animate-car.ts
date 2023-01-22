@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-export const animateCar = (car: HTMLElement, time: number, distance: number) => {
+export const animateCar = (car: HTMLElement, time: number, distance: number): AnimationState => {
   let start: number | undefined;
   let previousTimeStamp: number | undefined;
   let done = false;

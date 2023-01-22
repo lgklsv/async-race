@@ -27,7 +27,7 @@ export const renderRaceContainer = (): HTMLElement => {
     races.append(race);
   }
 
-  const paginateBtns: HTMLElement = createElem('div', 'garage__paginate-btns');
+  const paginateBtns: HTMLElement = createElem('div', 'paginate-btns');
   const prevBtn: HTMLElement = renderButton('prev', '');
   prevBtn.id = 'garage-prev';
 

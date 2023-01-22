@@ -20,7 +20,7 @@ export const cancelable = (promise: Promise<DriveMod>): CancelablePromise<DriveM
         }
       });
   }) as CancelablePromise<DriveMod>;
-  promiseObject.cancel = () => {
+  promiseObject.cancel = (): void => {
     cancelled = true;
   };
   return promiseObject;

@@ -15,9 +15,10 @@ export const renderWinnersTable = (): HTMLElement => {
     const number: HTMLElement = createElem('p', 'winners-table__number');
     number.innerHTML = ((winnersState.page - 1) * winnersState.limit + (i + 1)).toString();
     number.classList.add('column-item');
-    const car: HTMLElement = createElem('p', 'winners-table__car');
 
+    const car: HTMLElement = createElem('p', 'winners-table__car');
     car.innerHTML = carImage(winnersState.winners[i].color);
+
     const name: HTMLElement = createElem('p', 'winners-table__name');
     name.classList.add('column-item');
     name.innerHTML = winnersState.winners[i].name;
@@ -29,6 +30,7 @@ export const renderWinnersTable = (): HTMLElement => {
     const bestTime: HTMLElement = createElem('p', 'winners-table__time');
     bestTime.classList.add('column-item');
     bestTime.innerHTML = winnersState.winners[i].time.toString();
+
     row.append(number, car, name, wins, bestTime);
     tableBody.append(row);
   }

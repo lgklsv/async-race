@@ -22,11 +22,11 @@ export const renderWinnersTableContainer = (): HTMLElement => {
   // Render winners table
   const winnersTable = renderWinnersTable();
 
-  const paginateBtns: HTMLElement = createElem('div', 'garage__paginate-btns');
+  const paginateBtns: HTMLElement = createElem('div', 'paginate-btns');
   const prevBtn: HTMLElement = renderButton('prev', '');
   prevBtn.id = 'winners-prev';
 
-  prevBtn.onclick = () => {
+  prevBtn.onclick = (): void => {
     winnersState.page--;
     updateWinnersUI();
   };
@@ -34,7 +34,7 @@ export const renderWinnersTableContainer = (): HTMLElement => {
   const nextBtn: HTMLElement = renderButton('next', '');
   nextBtn.id = 'winners-next';
 
-  nextBtn.onclick = () => {
+  nextBtn.onclick = (): void => {
     winnersState.page++;
     updateWinnersUI();
   };
