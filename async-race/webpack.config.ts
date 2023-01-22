@@ -8,7 +8,7 @@ const entryPath = path.join(__dirname, 'src', 'index.ts');
 const bundlePath = path.join(__dirname, 'dist');
 const htmlTemplatePath = path.join(__dirname, 'src', 'index.html');
 const assetsPath = path.resolve(__dirname, 'src', 'assets');
-// const faviconPath = path.join(__dirname, 'src', 'assets', 'favicon.png'); //TODO
+const faviconPath = path.join(__dirname, 'src', 'assets', 'images', 'favicon.png');
 
 module.exports = {
   entry: entryPath,
@@ -24,7 +24,7 @@ module.exports = {
       alwaysWriteToDisk: true,
       template: htmlTemplatePath,
       inject: 'body',
-      // favicon: faviconPath,
+      favicon: faviconPath,
       clean: true,
     }),
     new CleanWebpackPlugin(),
