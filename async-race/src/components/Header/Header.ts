@@ -1,4 +1,6 @@
 import { createElem } from '../../utils/element-render/create-element';
+import { toGarageView } from './components/HeaderHandlers/toGarageView';
+import { toWinnersView } from './components/HeaderHandlers/toWinnersView';
 import styles from './Header.module.scss';
 
 export const renderHeader = (): HTMLElement => {
@@ -13,30 +15,13 @@ export const renderHeader = (): HTMLElement => {
   toGarageBtn.id = 'to-garage';
   toGarageBtn.classList.add('header__nav-btn_active');
 
-  toGarageBtn.onclick = (e: Event): void => {
-    // TODO refactor
-    const target = e.target as HTMLElement;
-    target.classList.add('header__nav-btn_active');
-    const winnersView = document.querySelector('.winners') as HTMLElement;
-    winnersView.classList.add('hidden');
+  toGarageBtn.onclick = toGarageView;
 
-    const toWinners = document.getElementById('to-winners') as HTMLElement;
-    toWinners.classList.remove('header__nav-btn_active');
-  };
   const toWinnersBtn: HTMLElement = createElem('li', 'header__nav-btn');
   toWinnersBtn.innerHTML = 'winners';
   toWinnersBtn.id = 'to-winners';
 
-  toWinnersBtn.onclick = (e: Event): void => {
-    // TODO refactor
-    const target = e.target as HTMLElement;
-    target.classList.add('header__nav-btn_active');
-    const winnersView = document.querySelector('.winners') as HTMLElement;
-    winnersView.classList.remove('hidden');
-
-    const toGarage = document.getElementById('to-garage') as HTMLElement;
-    toGarage.classList.remove('header__nav-btn_active');
-  };
+  toWinnersBtn.onclick = toWinnersView;
 
   headerNav.append(toGarageBtn, toWinnersBtn);
   headerContainer.append(headerLogo, headerNav);
