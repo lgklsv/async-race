@@ -41,18 +41,18 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 # First of all install the provided server
 $ git clone https://github.com/mikhama/async-race-api.git
 
-# Go to downloaded folder:
+# Go to downloaded folder
 $ cd async-race-api
 
-# Install dependencies:
+# Install dependencies
 $ npm install
 
-# Start server:
+# Start server
 $ npm start
 
-# Now you can send requests to the address: http://127.0.0.1:3000
+# Now you can send requests to: http://127.0.0.1:3000
 
-# Next step is to clone this repository
+# Next step is to clone this repository with the game
 $ git clone https://github.com/Alesia-Abaeva/rs-clone.git
 
 # Install dependencies for the actual project
