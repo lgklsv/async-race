@@ -1,6 +1,6 @@
 # Async-race
 
-[Async-race](https://lgklsv-async-race.netlify.app/) - race game based on server requests and responses.
+[Async-race](https://lgklsv-async-race.netlify.app/) - racing game based on server requests and responses.
 
 ## Key features
 
@@ -9,7 +9,7 @@
 - pagination is available on all the pages (garage, winners)
 - when user clicks to the engine start button -> UI is waiting for car's velocity answer (waiting for API response) -> the car makes another request to drive and the animation starts. In case api returned 500 error car stops and broken engine animation is shown
 - it is possible to start, reset one and all the races
-- nice race, engine break animation
+- beautiful animations of the race and the broken engine
 - race winners are saved to the local storage and shown on the winners page
 
 ## Screenshot
